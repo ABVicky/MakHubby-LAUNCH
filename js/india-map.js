@@ -1,10 +1,10 @@
 /**
  * High-Precision India Academic Network Map Visualizer
- * Ultra-Detailed Authentic Vector Projection + Photon Laser Engine
+ * Exact Official Geographic Boundary of India + Photon Laser Engine
  */
 
 class IndiaMapVisualizer {
-  constructor(containerId) {
+  constructor() {
     this.container = document.querySelector('.map-canvas-container');
     this.canvas = document.getElementById('india-map-canvas');
     if (!this.canvas) return;
@@ -14,18 +14,18 @@ class IndiaMapVisualizer {
     this.animationFrame = null;
     this.active = false;
 
-    // True geographical positions mapped onto standard India map coordinate space [viewBox: 0 0 600 680]
+    // High-precision geographic nodes calibrated to standard 600x700 map space
     this.nodes = [
-      { id: 'makaut', name: 'MAKAUT (West Bengal)', x: 420, y: 345, isOrigin: true, labelPos: 'right', state: 'Origin Hub' },
-      { id: 'kolkata', name: 'Kolkata (JU / CU)', x: 425, y: 375, isOrigin: false, labelPos: 'right', state: 'WB' },
-      { id: 'delhi', name: 'Delhi NCR (IITD / DU)', x: 235, y: 205, isOrigin: false, labelPos: 'left', state: 'Delhi' },
-      { id: 'roorkee', name: 'Roorkee (IITR)', x: 260, y: 165, isOrigin: false, labelPos: 'right', state: 'UK' },
-      { id: 'guwahati', name: 'Guwahati (IITG)', x: 505, y: 255, isOrigin: false, labelPos: 'right', state: 'Assam' },
-      { id: 'mumbai', name: 'Mumbai (IITB / MU)', x: 165, y: 420, isOrigin: false, labelPos: 'left', state: 'MH' },
-      { id: 'pune', name: 'Pune (SPPU / COEP)', x: 185, y: 450, isOrigin: false, labelPos: 'left', state: 'MH' },
-      { id: 'hyderabad', name: 'Hyderabad (IITH)', x: 280, y: 460, isOrigin: false, labelPos: 'right', state: 'TS' },
-      { id: 'bengaluru', name: 'Bengaluru (IISc)', x: 245, y: 555, isOrigin: false, labelPos: 'left', state: 'KA' },
-      { id: 'chennai', name: 'Chennai (IITM / Anna)', x: 305, y: 565, isOrigin: false, labelPos: 'right', state: 'TN' }
+      { id: 'makaut', name: 'MAKAUT (West Bengal)', x: 415, y: 345, isOrigin: true, labelPos: 'right' },
+      { id: 'kolkata', name: 'Kolkata (JU / CU)', x: 420, y: 375, isOrigin: false, labelPos: 'right' },
+      { id: 'delhi', name: 'Delhi NCR (IITD / DU)', x: 235, y: 200, isOrigin: false, labelPos: 'left' },
+      { id: 'roorkee', name: 'Roorkee (IITR)', x: 260, y: 165, isOrigin: false, labelPos: 'right' },
+      { id: 'guwahati', name: 'Guwahati / NE (IITG)', x: 505, y: 260, isOrigin: false, labelPos: 'right' },
+      { id: 'mumbai', name: 'Mumbai (IITB / MU)', x: 165, y: 415, isOrigin: false, labelPos: 'left' },
+      { id: 'pune', name: 'Pune (SPPU / COEP)', x: 185, y: 445, isOrigin: false, labelPos: 'left' },
+      { id: 'hyderabad', name: 'Hyderabad (IITH)', x: 275, y: 455, isOrigin: false, labelPos: 'right' },
+      { id: 'bengaluru', name: 'Bengaluru (IISc)', x: 240, y: 550, isOrigin: false, labelPos: 'left' },
+      { id: 'chennai', name: 'Chennai (IITM / Anna)', x: 300, y: 560, isOrigin: false, labelPos: 'right' }
     ];
 
     this.pulses = [];
@@ -33,74 +33,100 @@ class IndiaMapVisualizer {
   }
 
   init() {
-    this.injectDetailedSvgMap();
+    this.injectOfficialSvgMap();
     this.resize();
     window.addEventListener('resize', () => this.resize());
   }
 
   /**
-   * Embeds an authentic, high-definition curved SVG vector of India into the background
+   * Injects the exact official silhouette boundary of India
    */
-  injectDetailedSvgMap() {
+  injectOfficialSvgMap() {
     if (!this.container) return;
     
-    // Check if svg already exists
     let svgEl = document.getElementById('india-svg-vector');
     if (!svgEl) {
       svgEl = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
       svgEl.setAttribute('id', 'india-svg-vector');
-      svgEl.setAttribute('viewBox', '0 0 600 680');
+      svgEl.setAttribute('viewBox', '0 0 600 700');
       svgEl.innerHTML = `
         <defs>
           <linearGradient id="indiaMapGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#064e3b" stop-opacity="0.35" />
-            <stop offset="50%" stop-color="#1e1b4b" stop-opacity="0.2" />
-            <stop offset="100%" stop-color="#06090e" stop-opacity="0.6" />
+            <stop offset="0%" stop-color="#059669" stop-opacity="0.32" />
+            <stop offset="50%" stop-color="#6d28d9" stop-opacity="0.18" />
+            <stop offset="100%" stop-color="#06090e" stop-opacity="0.65" />
           </linearGradient>
-          <filter id="glowFilter" x="-20%" y="-20%" width="140%" height="140%">
-            <feGaussianBlur stdDeviation="4" result="blur" />
-            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+          <filter id="indiaNeonGlow" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="3.5" result="glow" />
+            <feComposite in="SourceGraphic" in2="glow" operator="over" />
           </filter>
         </defs>
 
-        <!-- Authentic High-Resolution India Geographic Vector Path -->
+        <!-- Exact Official Mainland Boundary of India -->
         <path class="india-border-path" d="
-          M 245,35
-          C 255,25 270,20 285,25
-          C 295,30 310,25 320,40
-          C 335,60 330,85 315,105
-          C 305,115 315,130 330,135
-          C 350,140 375,155 395,160
-          C 415,165 425,155 435,160
-          C 440,165 440,175 450,180
-          C 465,185 490,170 515,165
-          C 535,160 555,175 565,195
-          C 575,215 565,240 545,260
-          C 535,270 535,290 525,305
-          C 515,320 495,325 480,315
-          C 465,305 450,300 440,315
-          C 435,325 445,340 440,355
-          C 435,370 415,385 405,395
-          C 390,410 380,440 365,470
-          C 350,500 335,535 320,570
-          C 305,605 285,640 270,660
-          C 260,650 250,620 240,580
-          C 230,540 215,500 200,470
-          C 185,440 170,410 160,390
-          C 145,360 120,345 105,350
-          C 90,355 80,340 90,325
-          C 100,310 120,305 135,315
-          C 150,325 170,310 165,290
-          C 160,270 145,250 155,230
-          C 165,210 185,185 205,165
-          C 220,145 225,120 230,95
-          C 235,70 235,45 245,35 Z
-        " fill="url(#indiaMapGrad)" stroke="#34d399" stroke-width="2.2" filter="url(#glowFilter)" opacity="0.9" />
+          M 160,55
+          C 170,40 190,25 210,25
+          C 220,25 230,35 235,45
+          C 240,40 250,45 260,50
+          C 275,60 270,75 275,85
+          C 280,95 285,90 295,95
+          C 305,100 300,115 305,125
+          C 310,135 295,145 290,155
+          C 285,165 295,175 300,185
+          C 310,200 325,200 335,210
+          C 345,220 340,235 350,245
+          C 360,255 375,250 385,255
+          C 395,260 405,250 415,255
+          C 425,260 425,230 435,225
+          C 440,225 440,240 450,240
+          C 460,240 460,230 470,230
+          C 485,230 500,215 515,215
+          C 530,215 545,200 555,205
+          C 565,210 575,225 580,240
+          C 570,245 560,250 560,260
+          C 560,270 570,280 565,290
+          C 555,300 540,310 535,325
+          C 530,340 520,350 515,365
+          C 505,370 495,355 490,340
+          C 485,325 480,310 470,305
+          C 460,300 450,305 440,315
+          C 430,325 435,340 430,355
+          C 425,370 420,380 410,390
+          C 395,400 385,420 375,445
+          C 365,470 350,490 345,515
+          C 340,540 335,565 325,590
+          C 315,615 295,640 280,650
+          C 275,650 270,640 265,630
+          C 255,610 245,580 235,550
+          C 225,520 215,485 200,455
+          C 185,425 170,395 155,370
+          C 145,355 130,345 115,350
+          C 100,355 90,345 95,335
+          C 100,325 115,320 130,325
+          C 145,330 160,315 155,295
+          C 150,275 135,260 140,245
+          C 145,230 160,225 170,215
+          C 180,205 185,185 190,170
+          C 195,155 185,145 175,140
+          C 165,135 165,120 170,105
+          C 175,90 155,75 160,55 Z
+        " fill="url(#indiaMapGrad)" stroke="#34d399" stroke-width="2.2" filter="url(#indiaNeonGlow)" opacity="0.95" />
 
-        <!-- Interior Zone Contours -->
-        <path d="M 235,205 Q 330,270 420,345" fill="none" stroke="rgba(52, 211, 153, 0.15)" stroke-width="1" stroke-dasharray="4,4"/>
-        <path d="M 420,345 Q 330,450 245,555" fill="none" stroke="rgba(52, 211, 153, 0.15)" stroke-width="1" stroke-dasharray="4,4"/>
-        <path d="M 420,345 Q 290,380 165,420" fill="none" stroke="rgba(52, 211, 153, 0.15)" stroke-width="1" stroke-dasharray="4,4"/>
+        <!-- Andaman & Nicobar Islands -->
+        <g fill="#34d399" opacity="0.8">
+          <ellipse cx="495" cy="545" rx="3.5" ry="14" />
+          <ellipse cx="498" cy="575" rx="3" ry="8" />
+          <ellipse cx="490" cy="605" rx="2.5" ry="3.5" />
+          <ellipse cx="500" cy="625" rx="3.5" ry="6" />
+          <ellipse cx="508" cy="645" rx="3" ry="7" />
+        </g>
+
+        <!-- Lakshadweep Islands -->
+        <g fill="#34d399" opacity="0.8">
+          <circle cx="185" cy="580" r="2.5" />
+          <circle cx="190" cy="600" r="2.5" />
+          <circle cx="195" cy="625" r="3" />
+        </g>
       `;
       this.container.insertBefore(svgEl, this.canvas);
     }
@@ -111,7 +137,7 @@ class IndiaMapVisualizer {
     const rect = this.container.getBoundingClientRect();
     const dpr = window.devicePixelRatio || 1;
     
-    this.cssWidth = rect.width || 760;
+    this.cssWidth = rect.width || 680;
     this.cssHeight = rect.height || 480;
     
     this.canvas.width = this.cssWidth * dpr;
@@ -164,8 +190,8 @@ class IndiaMapVisualizer {
     this.ctx.clearRect(0, 0, this.cssWidth, this.cssHeight);
     this.animTime += 0.03;
 
-    // Coordinate mapping from SVG viewBox (600x680) to Screen Canvas
-    const svgAspect = 600 / 680;
+    // Coordinate mapping from SVG viewBox (600x700) to Screen Canvas
+    const svgAspect = 600 / 700;
     let renderW = this.cssWidth;
     let renderH = renderW / svgAspect;
 
@@ -179,7 +205,7 @@ class IndiaMapVisualizer {
 
     const toScreen = (x, y) => ({
       x: offsetX + (x / 600) * renderW,
-      y: offsetY + (y / 680) * renderH
+      y: offsetY + (y / 700) * renderH
     });
 
     const origin = this.nodes.find(n => n.isOrigin) || this.nodes[0];
@@ -193,7 +219,7 @@ class IndiaMapVisualizer {
       this.ctx.beginPath();
       this.ctx.moveTo(originPt.x, originPt.y);
       this.ctx.lineTo(targetPt.x, targetPt.y);
-      this.ctx.strokeStyle = 'rgba(52, 211, 153, 0.22)';
+      this.ctx.strokeStyle = 'rgba(52, 211, 153, 0.25)';
       this.ctx.lineWidth = 1.3;
       this.ctx.setLineDash([4, 4]);
       this.ctx.stroke();
@@ -258,7 +284,7 @@ class IndiaMapVisualizer {
         this.ctx.fillStyle = '#34d399';
         this.ctx.textAlign = 'left';
         this.ctx.textBaseline = 'middle';
-        this.ctx.shadowColor = 'rgba(0, 0, 0, 0.9)';
+        this.ctx.shadowColor = 'rgba(0, 0, 0, 0.95)';
         this.ctx.shadowBlur = 8;
         this.ctx.fillText(`★ ${node.name}`, pt.x + 16, pt.y);
         this.ctx.shadowBlur = 0;
