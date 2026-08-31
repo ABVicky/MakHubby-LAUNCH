@@ -1,210 +1,186 @@
 <div align="center">
 
-# 🚀 MAKHUBBY
+<br/>
+
+<img src="https://www.google.com/s2/favicons?domain=makhubby.in&sz=128" width="90" height="90" alt="MakHubby Logo" style="border-radius: 20px; box-shadow: 0 8px 30px rgba(56, 189, 248, 0.4); padding: 6px; background: #ffffff;" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="https://www.manikarnikatechnologies.in/_next/image?url=%2Ficon_logo.png&w=96&q=75" width="90" height="90" alt="Manikarnika Technologies Logo" style="border-radius: 20px; box-shadow: 0 8px 30px rgba(129, 140, 248, 0.4); padding: 6px; background: #ffffff;" />
+
+# MAKHUBBY
 ### *The Student Operating Ecosystem*
 
 ```
-  __  __       _    _    _       _     _             
- |  \/  |     | |  | |  | |     | |   | |            
- | \  / | __ _| | _| |__| |_   _| |__ | |__  _   _   
- | |\/| |/ _` | |/ /  __  | | | | '_ \| '_ \| | | |  
- | |  | | (_| |   <| |  | | |_| | |_) | |_) | |_| |  
- |_|  |_|\__,_|_|\_\_|  |_|\__,_|_.__/|_.__/ \__, |  
-                                               __/ |  
-         R I S I N G   F R O M   H E R E      |___/   
+   ███╗   ███╗ █████╗ ██╗  ██╗██╗  ██╗██╗   ██╗██████╗ ██████╗ ██╗   ██╗
+   ████╗ ████║██╔══██╗██║ ██╔╝██║  ██║██║   ██║██╔══██╗██╔══██╗╚██╗ ██╔╝
+   ██╔████╔██║███████║█████═╝ ███████║██║   ██║██████╔╝██████╔╝ ╚████╔╝ 
+   ██║╚██╔╝██║██╔══██║██╔═██╗ ██╔══██║██║   ██║██╔══██╗██╔══██╗  ╚██╔╝  
+   ██║ ╚═╝ ██║██║  ██║██║ ╚██╗██║  ██║╚██████╔╝██████╔╝██████╔╝   ██║   
+   ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═════╝    ╚═╝   
+                  —  R I S I N G   F R O M   H E R E  —                 
 ```
 
-**An immersive, cinematic, high-contrast keynote presentation experience for the official launch of MakHubby.**  
-*Powered & Brought to You by **Manikarnika Technologies**.*
+**An Apple Keynote-style cinematic launch presentation engineered for live projection.**  
+*Built for MAKAUT. Expanding to India. Powered by [Manikarnika Technologies](https://manikarnikatechnologies.in).*
 
-[![Website](https://img.shields.io/badge/Platform-makhubby.in-38bdf8?style=for-the-badge&logo=googlechrome&logoColor=white)](https://makhubby.in)
-[![Corporate](https://img.shields.io/badge/Company-manikarnikatechnologies.in-818cf8?style=for-the-badge&logo=shield&logoColor=white)](https://manikarnikatechnologies.in)
-[![Status](https://img.shields.io/badge/Status-LIVE%20ON%20STAGE-10b981?style=for-the-badge&logo=checkmarx&logoColor=white)](https://makhubby.in)
-[![Tech](https://img.shields.io/badge/Stack-Pure%20Vanilla%20JS%20%7C%20HTML5%20%7C%20CSS3-f59e0b?style=for-the-badge&logo=javascript&logoColor=white)](https://github.com/ABVicky/MakHubby-LAUNCH)
+<br/>
 
----
+[![Live Portal](https://img.shields.io/badge/Official%20App-makhubby.in-38bdf8?style=for-the-badge&logo=googlechrome&logoColor=white)](https://makhubby.in)
+[![Corporate Parent](https://img.shields.io/badge/Powered%20By-Manikarnika%20Technologies-818cf8?style=for-the-badge&logo=shield&logoColor=white)](https://manikarnikatechnologies.in)
+[![Launch Date](https://img.shields.io/badge/Launch%20Day-01.09.2026-10b981?style=for-the-badge&logo=clock&logoColor=white)](https://makhubby.in)
+[![Tech Stack](https://img.shields.io/badge/Architecture-Pure%20HTML5%20%2F%20CSS3%20%2F%20JS-f59e0b?style=for-the-badge&logo=javascript&logoColor=white)](https://github.com/ABVicky/MakHubby-LAUNCH)
 
-### *"An idea → A problem → A decision → 243 days → 4,374 hours → 73,500+ lines of code → A product → A launch → MAKAUT to India."*
+<br/>
+
+> *"An idea → A problem → A decision → 243 days → 4,374 hours → 73,500+ lines of code → A product → A launch → MAKAUT to India."*
 
 </div>
 
 ---
 
-## 🎬 The Vision
+## 📽️ The Story in 4 Acts
 
-This is **not a conventional corporate slide deck**. This is a **cinematic startup documentary in code**, engineered to run live on massive auditorium projector screens and digital boards.
+```mermaid
+flowchart LR
+    A["💡 THE SPARK<br/>01.01.2026"] --> B["⚡ THE CRUCIBLE<br/>243 Days • 4,374h"]
+    B --> C["🔥 73,500+ LINES<br/>Flutter + Native Core"]
+    C --> D["🚀 LAUNCH DAY<br/>makhubby.in LIVE"]
+    D --> E["🇮🇳 EXPANSION<br/>MAKAUT ➔ INDIA"]
+    
+    style A fill:#0f172a,stroke:#38bdf8,stroke-width:2px,color:#fff
+    style B fill:#0f172a,stroke:#f59e0b,stroke-width:2px,color:#fff
+    style C fill:#0f172a,stroke:#ef4444,stroke-width:2px,color:#fff
+    style D fill:#0f172a,stroke:#10b981,stroke-width:2px,color:#fff
+    style E fill:#0f172a,stroke:#818cf8,stroke-width:2px,color:#fff
+```
 
-It tells the raw, unfiltered, emotional story of building **MakHubby** from scratch — through 243 days of sleepless nights, crashes, rebuilds, and sheer relentless execution — expanding from MAKAUT to universities across India.
+### 📖 Narrative Blueprint
+
+1. **Act I: The Spark & The Fracture (Scenes 01–03)**
+   - January 1, 2026: College students were drowning in fragmented tools — scattered notes, buried notices, isolated peer networks.
+   - One decision emerged: **BUILD IT.**
+2. **Act II: The Relentless Crucible (Scenes 04–10)**
+   - 243 days. 18 hours every single day. 15,746,400 measured seconds.
+   - Crashes, bugs, architectural bottlenecks, and complete rewrites. We didn't quit — we re-engineered.
+3. **Act III: The Breakthrough & The Identity (Scenes 11–13)**
+   - `73,500+ lines of code` suddenly became more than a software repository — it became **MakHubby**.
+   - Backed by the engineering muscle and vision of **Manikarnika Technologies**.
+4. **Act IV: The Horizon (Scenes 14–20)**
+   - MAKAUT was just the testing ground. The destination is connecting 40+ million college students across India.
 
 ---
 
-## ⚡ Engineering Numbers at a Glance
+## ⚡ Real Engineering Metrics
 
-<div align="center">
+```
+╔═════════════════════════════════════════════════════════════════════════╗
+║                      THE BUILD BY THE NUMBERS                           ║
+╠═════════════════════════════════════════╦═══════════════════════════════╣
+║ 🗓️ Total Development Duration          ║ 243 Days                      ║
+║ ⏱️ Cumulative Development Hours        ║ 4,374 Dev Hours (18 hrs/day)  ║
+║ ⚡ Total Measured Seconds               ║ 15,746,400 Seconds            ║
+║ 📂 Project Folder Architecture          ║ 96 Folders                    ║
+║ 📄 Production Source Files              ║ 264 Files                     ║
+║ 💻 Handwritten Core Source Code         ║ 73,500+ Lines                 ║
+║ 📦 Entire Project Footprint             ║ 131,980 Total Lines           ║
+╚═════════════════════════════════════════╩═══════════════════════════════╝
+```
 
-| Metric | Measured Value | What It Represents |
+### 🧬 Architectural Distribution
+
+| Layer | Lines of Code | Role in Ecosystem |
 | :--- | :--- | :--- |
-| 🗓️ **Timeline** | `243 Days` | From initial napkin idea (`01.01.2026`) to official release |
-| ⏱️ **Effort** | `4,374 Hours` | Hardcore development time (`18 hours / day`) |
-| ⚡ **Seconds** | `15,746,400 s` | Pure relentless execution |
-| 📁 **Structure** | `96 Folders` | Modular multi-layer engineering system |
-| 📄 **Source Files** | `264 Files` | Clean separation of concerns |
-| 💻 **Source Code** | **`73,500+ Lines`** | Total handwritten application core |
-| 📦 **Total Project** | **`131,980 Lines`** | Entire ecosystem including configs, tests & assets |
-
-</div>
-
-### 🏗️ 6-Layer Architecture Breakdown
-
-```
-┌─────────────────────────────────────────────────────────────┐
-│                   MAKHUBBY ECOSYSTEM CORE                   │
-├───────────────────────────────┬─────────────────────────────┤
-│ Flutter Core Application      │ 60,655 lines                │
-│ Native Android Platform       │  3,396 lines                │
-│ Automated Regression Tests    │  2,794 lines                │
-│ Desktop Native Integrations   │  2,150 lines                │
-│ Cloud Functions & API Layer   │  1,848 lines                │
-│ Web & Platform Glue           │    683 lines                │
-├───────────────────────────────┴─────────────────────────────┤
-│ TOTAL SOURCE CODE             │ 73,500+ lines               │
-└─────────────────────────────────────────────────────────────┘
-```
+| 📱 **Flutter Core Application** | `60,655 lines` | Cross-platform UI, state machines, offline cache |
+| 🤖 **Android Native Platform** | `3,396 lines` | Native background services, intents, platform channels |
+| 🧪 **Regression Test Suite** | `2,794 lines` | Unit tests, widget tests, integration QA |
+| 🖥️ **Desktop Native Integrations** | `2,150 lines` | Multi-window system bridges & filesystem handlers |
+| ☁️ **Cloud Functions & API Layer** | `1,848 lines` | Real-time student sync, push notifications, auth |
+| 🌐 **Web Platform Layer** | `683 lines` | Browser-specific optimizations & WASM glue |
 
 ---
 
-## 📽️ Auditorium & Stage Projector Optimizations
+## 🎮 Stage & Projector Superpowers
 
-Built with specialized optical and presenter features designed specifically for high-lumen laser projectors and auditorium stages:
+Engineered from the ground up for massive auditorium screens, dual laser projectors, and presenter confidence:
 
-- 🏛️ **Static Top Dual-Brand Header (50/50 Split):**
-  - **Left Half:** High-contrast Electric Cyan **MakHubby** badge with live link to `makhubby.in`.
-  - **Right Half:** High-contrast Royal Indigo **Manikarnika Technologies** badge with live link to `manikarnikatechnologies.in`.
-  - Stays persistent and razor-sharp across all 20 scenes.
-- 🔴 **Virtual Stage Laser Pointer (`L` Key):**
-  - Instant high-lumen glowing red laser dot tracking cursor movement for highlighting live metrics and features.
-- ⬛ **Stage Blackout / Blank Mode (`B` Key):**
-  - Blanks the projection screen to pure black instantly so audience focus shifts 100% to the speaker.
-- 📱 **Long-Distance Auditorium QR Scanning:**
-  - High-contrast scaled vector QR code on Scene 19 enabling back-row audience members (30+ meters away) to scan and open `makhubby.in` directly.
-- 🎵 **Procedural Web Audio Engine:**
-  - Synthesizes dynamic sub-bass drops, risers, and glitch bursts natively via Web Audio API (Zero external MP3 dependencies).
-- 🗺️ **Vector India Map Visualizer:**
-  - Dynamic canvas visualizer showing MAKAUT/West Bengal origin node emitting photon laser pulses across universities nationwide.
-- ✨ **Auto-Hiding Clean Mode:**
-  - Cursor and HUD seamlessly fade after 3.5s of inactivity so the screen remains 100% distraction-free.
+| Feature | Trigger | What Happens on Stage |
+| :--- | :---: | :--- |
+| **🏛️ Static Dual-Brand Header** | *Always On* | Massive `84px` top bar divided 50/50: **MakHubby** (Cyan) on left, **Manikarnika** (Indigo) on right with `62px` logos. |
+| **🔴 Virtual Stage Laser** | <kbd>L</kbd> | Displays a high-lumen glowing red laser dot that follows the cursor for pinpointing numbers and map nodes. |
+| **⬛ Stage Blackout Mode** | <kbd>B</kbd> or <kbd>.</kbd> | Instantly blanks the projection screen to black when the speaker wants 100% of the audience's attention on themselves. |
+| **🎵 Procedural Audio Engine** | <kbd>M</kbd> | Procedurally synthesizes sub-bass drops, rising frequencies, and tactile clicks using native Web Audio API oscillators. |
+| **🗺️ Vector India Map** | *Scene 15* | Canvas engine calculating real-time photon beams pulsing from MAKAUT to university hubs nationwide. |
+| **📱 30m Auditorium QR Scan** | *Scene 19* | Ultra-high contrast scaled QR code so audience members in the back row can scan `makhubby.in` directly. |
+| **✨ Inactivity Auto-Fade** | *Automatic* | Mouse cursor and HUD vanish after 3.5s of presenter inactivity for a 100% pristine cinematic view. |
 
 ---
 
-## 🎮 Stage Controller & Remote Clicker Shortcuts
+## 🕹️ Presenter Remote & Keyboard Controls
 
 <div align="center">
 
-| Shortcut / Remote Button | Stage Presenter Action |
-| :--- | :--- |
-| **`Space` / `→` / `Clicker Next` / `Enter`** | Advance to Next Scene |
-| **`←` / `Clicker Prev` / `Backspace`** | Return to Previous Scene |
-| **`F` / `F5`** | Toggle Fullscreen 16:9 Stage Mode |
-| **`L`** | Toggle Virtual Stage Laser Pointer |
-| **`B` / `.`** | Stage Blackout (Blank Screen) |
-| **`M`** | Toggle Procedural Sound FX Synth |
-| **`P`** | Open Scene Navigator Drawer (`01 - 20`) |
-| **`?` / `H`** | Open Keyboard & Clicker Help Modal |
-| **`Home` / `End`** | Jump to First / Last Scene |
+```
+  [ ← / PageUp ]  ◀─── PREVIOUS SCENE      NEXT SCENE ───▶  [ Space / → / PageDown ]
+  [ L ]           ◀─── VIRTUAL LASER      STAGE BLACKOUT ──▶  [ B / . ]
+  [ F / F5 ]      ◀─── 16:9 FULLSCREEN    SCENE NAVIGATOR ──▶  [ P ]
+  [ M ]           ◀─── SOUND FX SYNTH     SHORTCUTS HELP ──▶  [ ? / H ]
+```
+
+*Fully compatible with Logitech R400/R800, Kensington, Baseus, and spotlight presentation remotes.*
 
 </div>
 
 ---
 
-## 🗺️ The 20-Scene Narrative Storyboard
+## 💎 Zero-Dependency Engineering Philosophy
 
-<details>
-<summary><b>Click to expand full 20-Scene Storyboard</b></summary>
-
-<br>
-
-| Scene | Identifier | Key Storytelling Beat |
-| :---: | :--- | :--- |
-| **01** | `Before Everything` | `01.01.2026` — It started with an idea. |
-| **02** | `The Problem` | Scattered university resources → `SO WE STARTED BUILDING.` |
-| **03** | `The Decision` | `ONE PROBLEM. ONE IDEA. ONE DECISION. BUILD IT.` |
-| **04** | `The Journey Begins` | Horizontal chronological track initiating month-by-month progress. |
-| **05** | `The Clock` | Giant ticking stats: `243 Days`, `4,374 Dev Hours`, `15.7M Seconds`. |
-| **06** | `The Effort` | `18 HOURS A DAY.` Building something from nothing. |
-| **07** | `The Build` | Engineering scale: **`73,500+ Lines of Source Code`** (`96 Folders`, `264 Files`). |
-| **08** | `What's Under The Hood` | 6-layer architectural breakdown: Flutter Core, Android Native, Test Suite, Cloud. |
-| **09** | `It Broke` | Resilience & glitch sequence: `BUGS. CRASHES. BUT WE KEPT BUILDING.` |
-| **10** | `Months Progression` | Journey from January idea to August readiness: `ARE WE READY? YES.` |
-| **11** | `It Became Real` | **Hero MakHubby Logo Reveal** → *"IT WASN'T JUST CODE ANYMORE. IT WAS MAKHUBBY."* |
-| **12** | `What is MakHubby?` | Five Pillars: `LEARN. CONNECT. DISCOVER. CREATE. GROW.` |
-| **13** | `Manikarnika Technologies` | Parent company reveal & values: *Technology • Innovation • Execution*. |
-| **14** | `Why Stop Here?` | Transitioning from MAKAUT to national scale: `BUT WHY STOP HERE?` |
-| **15** | `From MAKAUT to India` | Interactive vector map of India with laser photon university connections. |
-| **16** | `The Vision` | `MAKAUT WAS THE BEGINNING. INDIA IS THE VISION.` |
-| **17** | `This is Not the End` | Compressed vertical journey timeline rising upward. |
-| **18** | `Rising From Here` | `WE STARTED HERE. NOW WE RISE. MAKHUBBY.` |
-| **19** | `Launch is Live` | `01.09.2026` — **MAKHUBBY IS LIVE** (Web + Android `makhubby.in` + QR). |
-| **20** | `Closing Finale` | Dual brand emblems on illuminated pedestals → **`LET'S RISE.`** |
-
-</details>
+```
+  ┌────────────────────────────────────────────────────────┐
+  │                 PURE VANILLA WEB STACK                 │
+  ├──────────────────┬──────────────────┬──────────────────┤
+  │   HTML5 Living   │   Modern CSS3    │  Vanilla JS ES6+ │
+  │   Semantic DOM   │  Custom Tokens   │  Audio & Canvas  │
+  ├──────────────────┴──────────────────┴──────────────────┤
+  │  ✓ No Node.js    ✓ No Webpack/Vite   ✓ Zero npm build  │
+  │  ✓ Instant load  ✓ 60 FPS Smooth     ✓ Runs anywhere   │
+  └────────────────────────────────────────────────────────┘
+```
 
 ---
 
-## 💻 Tech Stack & Architecture
+## 🚀 Quick Launch
 
-```
-MakHubby-LAUNCH/
-├── index.html          # All 20 cinematic narrative scenes + stage overlays
-├── README.md           # Documentation & Stage Guide
-├── css/
-│   ├── main.css        # Core typography, 16:9 stage viewport, top navbar
-│   ├── scenes.css      # Scene-specific animations, hero logos, India map
-│   ├── hud.css         # Modern single-line presenter HUD, drawer & modal
-│   └── variables.css   # High-lumen color tokens & typography scales
-└── js/
-    ├── app.js          # App orchestrator, keyboard/clicker events, laser/blackout
-    ├── audio.js        # Procedural Web Audio synthesizer (bass drop, riser, clicks)
-    ├── config.js       # Presentation CMS config, stats, brand URLs & map nodes
-    ├── india-map.js    # Canvas India map engine with photon laser pulses
-    ├── mockups.js      # Interactive student platform UI simulation
-    ├── particles.js    # Ambient constellation particle background
-    └── scenes.js       # Scene transition lifecycle & dynamic number tickers
-```
-
-- **Zero Bundler Overhead:** No `npm install`, no Webpack/Vite build steps. Runs instantly in any browser.
-- **Hardware-Accelerated 60FPS:** CSS `transform` & `opacity` transitions with `requestAnimationFrame` for buttery-smooth animations.
-- **Offline / Localhost Ready:** Works seamlessly via `http://localhost:8000` or direct `file://` double-clicking.
-
----
-
-## 🚀 Running Locally
-
+### Option 1: Run Locally via Python Server
 ```bash
 # Clone the repository
 git clone https://github.com/ABVicky/MakHubby-LAUNCH.git
 
-# Enter the project directory
+# Enter repository
 cd MakHubby-LAUNCH
 
-# Launch with local Python HTTP server
+# Launch local server
 python3 -m http.server 8000
 
-# Open in your browser
+# Open in browser:
 # http://localhost:8000
 ```
 
+### Option 2: Direct Double-Click
+Simply double-click `index.html` on any machine (Mac, Windows, Linux) — it works out of the box with zero setup.
+
 ---
+
+## 🏛️ Official Portals
 
 <div align="center">
 
-### 🌐 Official Ecosystem Links
+| Ecosystem Component | Identity | URL |
+| :--- | :--- | :--- |
+| 🎓 **Product Platform** | MakHubby | [https://makhubby.in](https://makhubby.in) |
+| 🏢 **Parent Company** | Manikarnika Technologies | [https://manikarnikatechnologies.in](https://manikarnikatechnologies.in) |
 
-[![MakHubby Web App](https://img.shields.io/badge/Open-MakHubby.in-38bdf8?style=for-the-badge&logo=safari&logoColor=white)](https://makhubby.in)
-[![Manikarnika Technologies](https://img.shields.io/badge/Visit-ManikarnikaTechnologies.in-818cf8?style=for-the-badge&logo=edge&logoColor=white)](https://manikarnikatechnologies.in)
+<br/>
 
-<br>
-
-**Built with passion & relentless execution.**  
+**Built with pride & relentless drive for students across India.**  
 *© 2026 MakHubby & Manikarnika Technologies. All Rights Reserved.*
 
 </div>
