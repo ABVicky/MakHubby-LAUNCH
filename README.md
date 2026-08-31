@@ -102,7 +102,7 @@ flowchart LR
 
 | Scene | Identifier | Key Storytelling Beat |
 | :---: | :--- | :--- |
-| **00** | `Stage Curtain` | **Official Launch Event Opening Screen** (`MAKHUBBY KEYNOTE '26` • Dual Logos). |
+| **00** | `Manikarnika Opener` | **Brought to you by Manikarnika Technologies** (Dedicated Grand Logo Stage Reveal). |
 | **01** | `Before Everything` | `01.01.2026` — It started with an idea. |
 | **02** | `The Problem` | Scattered university resources → `SO WE STARTED BUILDING.` |
 | **03** | `The Decision` | `ONE PROBLEM. ONE IDEA. ONE DECISION. BUILD IT.` |

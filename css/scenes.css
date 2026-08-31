@@ -3,72 +3,14 @@
  */
 
 /* ==========================================================================
-   SCENE 00: OPENING STAGE CURTAIN (SCREEN 0)
+   SCENE 00: MANIKARNIKA OPENER (SCREEN 0)
    ========================================================================== */
-.screen0-dual-brand {
+.screen0-manikarnika-showcase {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: clamp(1.5rem, 4vw, 3rem);
-  margin: 1.5rem 0;
-}
-
-.screen0-logo-badge {
-  width: clamp(110px, 16vw, 150px);
-  height: clamp(110px, 16vw, 150px);
-  border-radius: 32px;
-  background: #ffffff;
-  padding: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 2.5px solid rgba(255, 255, 255, 0.85);
-  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.9);
-}
-
-.screen0-logo-badge.teal-glow {
-  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.9), 0 0 35px var(--accent-teal-glow);
-}
-
-.screen0-logo-badge.purple-glow {
-  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.9), 0 0 35px var(--accent-purple-glow);
-}
-
-.screen0-img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-.screen0-cross {
-  font-size: clamp(1.6rem, 3vw, 2.4rem);
-  font-weight: 300;
-  color: var(--text-dim);
-}
-
-.screen0-start-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.8rem;
-  padding: 0.8rem 1.8rem;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  font-family: var(--font-mono);
-  font-size: clamp(0.85rem, 1.3vw, 1.05rem);
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  color: var(--text-white);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
-}
-
-.pulse-cue-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: var(--accent-teal-bright);
-  box-shadow: 0 0 12px var(--accent-teal-bright);
-  animation: pulseLight 1.8s infinite ease-in-out;
+  text-align: center;
 }
 
 

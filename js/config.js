@@ -128,7 +128,7 @@ window.PRESENTATION_CONFIG = {
 
   // Scene metadata for presenter navigation drawer
   scenesList: [
-    { num: "00", id: "scene-00", title: "Opening Stage Curtain" },
+    { num: "00", id: "scene-00", title: "Brought to you by Manikarnika Technologies" },
     { num: "01", id: "scene-01", title: "Before Everything" },
     { num: "02", id: "scene-02", title: "The Problem (Scattered)" },
     { num: "03", id: "scene-03", title: "The Decision (Build It)" },
