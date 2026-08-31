@@ -112,18 +112,18 @@ window.PRESENTATION_CONFIG = {
     { month: "AUGUST", title: "ARE WE READY?", note: "Final polishing. Zero compromises." }
   ],
 
-  // India Academic Map Nodes
+  // India Academic Map Nodes (Accurate Normalized Coordinates)
   mapNodes: [
-    { id: "makaut", name: "MAKAUT (West Bengal)", x: 74, y: 54, isOrigin: true, type: "Origin Hub" },
-    { id: "kolkata", name: "Kolkata Hub (JU / CU)", x: 75, y: 58, isOrigin: false, type: "State Node" },
-    { id: "delhi", name: "Delhi Hub (IITD / DU)", x: 38, y: 32, isOrigin: false, type: "Expansion Hub" },
-    { id: "mumbai", name: "Mumbai Hub (IITB / MU)", x: 26, y: 64, isOrigin: false, type: "Expansion Hub" },
-    { id: "bangalore", name: "Bengaluru Tech Hub (IISc / VTU)", x: 42, y: 83, isOrigin: false, type: "Expansion Hub" },
-    { id: "chennai", name: "Chennai Hub (IITM / Anna Univ)", x: 50, y: 84, isOrigin: false, type: "Expansion Hub" },
-    { id: "hyderabad", name: "Hyderabad Hub (IITH / JNTU)", x: 44, y: 68, isOrigin: false, type: "Expansion Hub" },
-    { id: "pune", name: "Pune Hub (SPPU / COEP)", x: 30, y: 66, isOrigin: false, type: "Expansion Hub" },
-    { id: "roorkee", name: "Roorkee / North Hub (IITR)", x: 42, y: 26, isOrigin: false, type: "Expansion Hub" },
-    { id: "guwahati", name: "North-East Hub (IITG)", x: 88, y: 40, isOrigin: false, type: "Expansion Hub" }
+    { id: "makaut", name: "MAKAUT (West Bengal)", x: 72, y: 47, isOrigin: true, type: "Origin Hub" },
+    { id: "kolkata", name: "Kolkata Hub (JU / CU)", x: 73, y: 51, isOrigin: false, type: "State Node" },
+    { id: "delhi", name: "Delhi NCR (IITD / DU)", x: 44, y: 22, isOrigin: false, type: "Expansion Hub" },
+    { id: "roorkee", name: "Roorkee (IITR)", x: 48, y: 16, isOrigin: false, type: "Expansion Hub" },
+    { id: "guwahati", name: "North-East Hub (IITG)", x: 84, y: 31, isOrigin: false, type: "Expansion Hub" },
+    { id: "mumbai", name: "Mumbai Hub (IITB / MU)", x: 33, y: 55, isOrigin: false, type: "Expansion Hub" },
+    { id: "pune", name: "Pune Hub (SPPU / COEP)", x: 36, y: 60, isOrigin: false, type: "Expansion Hub" },
+    { id: "hyderabad", name: "Hyderabad Hub (IITH / JNTU)", x: 50, y: 61, isOrigin: false, type: "Expansion Hub" },
+    { id: "bangalore", name: "Bengaluru Tech Hub (IISc / VTU)", x: 45, y: 76, isOrigin: false, type: "Expansion Hub" },
+    { id: "chennai", name: "Chennai Hub (IITM / Anna Univ)", x: 55, y: 78, isOrigin: false, type: "Expansion Hub" }
   ],
 
   // Scene metadata for presenter navigation drawer
