@@ -1,0 +1,324 @@
+/**
+ * MakHubby Launch Presentation - Clean, Simple & Premium Design System
+ * Apple Keynote Elegance • Pure Negative Space • Zero Clutter
+ */
+
+:root {
+  /* Matte Obsidian & Deep Canvas */
+  --bg-pure: #000000;
+  --bg-surface: #0a0c10;
+  --bg-glass: rgba(255, 255, 255, 0.04);
+
+  /* Curated High-Lumen Accents */
+  --accent-cyan: #38bdf8;
+  --accent-cyan-glow: rgba(56, 189, 248, 0.35);
+  --accent-emerald: #10b981;
+  --accent-emerald-glow: rgba(16, 185, 129, 0.35);
+  --accent-indigo: #818cf8;
+  --accent-indigo-glow: rgba(129, 140, 248, 0.3);
+  --accent-red: #ef4444;
+
+  /* Typography */
+  --text-white: #ffffff;
+  --text-sub: #94a3b8;
+  --text-dim: #64748b;
+
+  /* Fonts */
+  --font-main: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', system-ui, sans-serif;
+  --font-mono: 'SF Mono', 'JetBrains Mono', ui-monospace, monospace;
+
+  /* Transitions */
+  --ease-cinematic: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: var(--bg-pure);
+  color: var(--text-white);
+  font-family: var(--font-main);
+  user-select: none;
+}
+
+/* Ambient Particles */
+#particle-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+/* ==========================================================================
+   STATIC TOP DUAL-BRAND NAVBAR (MASSIVE LOGOS & HIGH-CONTRAST BOLD)
+   ========================================================================== */
+.top-brand-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 84px;
+  display: flex;
+  align-items: stretch;
+  z-index: 90;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.95);
+  border-bottom: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+.nav-brand-half {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 3rem;
+  text-decoration: none;
+  transition: filter 0.2s ease;
+}
+
+/* Left Half: MakHubby (High-Contrast Electric Cyan-Blue) */
+.nav-brand-half.left-half {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+  justify-content: flex-start;
+  gap: 1.5rem;
+  border-right: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+/* Right Half: Manikarnika Technologies (High-Contrast Royal Indigo-Violet) */
+.nav-brand-half.right-half {
+  background: linear-gradient(135deg, #4338ca 0%, #312e81 100%);
+  justify-content: flex-end;
+  gap: 1.5rem;
+}
+
+.nav-brand-half:hover {
+  filter: brightness(1.18);
+}
+
+.nav-brand-logo {
+  width: 62px;
+  height: 62px;
+  border-radius: 16px;
+  object-fit: contain;
+  background: #ffffff;
+  padding: 3px;
+  flex-shrink: 0;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
+  border: 2.5px solid #ffffff;
+}
+
+.nav-brand-meta {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.18;
+}
+
+.nav-brand-title {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', system-ui, sans-serif;
+  font-size: clamp(1.35rem, 2.2vw, 1.7rem);
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.7);
+}
+
+.nav-brand-domain {
+  font-family: 'SF Mono', 'JetBrains Mono', ui-monospace, monospace;
+  font-size: clamp(0.95rem, 1.3vw, 1.15rem);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  margin-top: 2px;
+}
+
+.nav-brand-domain.cyan {
+  color: #e0f2fe;
+}
+
+.nav-brand-domain.indigo {
+  color: #e0e7ff;
+}
+
+.nav-center-divider {
+  display: none;
+}
+
+/* Adjust presentation stage to accommodate massive top navbar */
+.presentation-viewport {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 84px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 50% 50%, #06080d 0%, #000000 100%);
+}
+
+.presentation-stage {
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  height: 100%;
+  max-height: 840px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 3rem;
+}
+
+/* Pure Fullscreen Scenes */
+.scene {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: scale(0.97);
+  transition: opacity 0.6s var(--ease-cinematic), transform 0.6s var(--ease-cinematic), visibility 0.6s;
+  padding: 2rem;
+  z-index: 5;
+}
+
+.scene.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: scale(1);
+  z-index: 10;
+}
+
+.scene.passed {
+  transform: scale(1.02);
+}
+
+/* Universal Keynote Typography */
+.keynote-hero {
+  font-size: clamp(3.8rem, 8.5vw, 7.2rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.02;
+  color: var(--text-white);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.keynote-title {
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.08;
+  color: var(--text-white);
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+}
+
+.keynote-sub {
+  font-size: clamp(1.3rem, 2.4vw, 2.2rem);
+  font-weight: 400;
+  color: var(--text-sub);
+  max-width: 840px;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+}
+
+/* Accents */
+.text-cyan {
+  color: var(--accent-cyan);
+}
+
+.text-emerald {
+  color: var(--accent-emerald);
+}
+
+.text-red {
+  color: var(--accent-red);
+}
+
+.text-sub {
+  color: var(--text-sub);
+}
+
+/* Sleek Badge */
+.stage-tag {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent-cyan);
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+/* Laser Pointer */
+.stage-laser-pointer {
+  position: fixed;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ff1e56;
+  box-shadow: 0 0 16px #ff1e56, 0 0 35px #ff1e56, 0 0 6px #fff;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+body.laser-active .stage-laser-pointer {
+  display: block;
+}
+
+body.laser-active {
+  cursor: crosshair;
+}
+
+/* Stage Blackout */
+.stage-blackout-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #000000;
+  z-index: 9998;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+body.blackout-active .stage-blackout-overlay {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+body.hide-cursor {
+  cursor: none;
+}
+
+body.hide-cursor .presenter-hud {
+  opacity: 0;
+  pointer-events: none;
+}

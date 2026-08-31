@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>MakHubby — Launch Experience | Manikarnika Technologies</title>
+  
+  <meta name="description" content="Official launch presentation of MakHubby: The Student Operating Ecosystem. Built for MAKAUT, expanding to India. Powered by Manikarnika Technologies.">
+  <meta property="og:title" content="MakHubby — Rising From Here">
+  <meta property="og:description" content="243 Days. 4,374 Hours. 73,500+ Lines of Code. From MAKAUT to India.">
+  <meta property="og:type" content="website">
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/scenes.css">
+  <link rel="stylesheet" href="css/hud.css">
+</head>
+<body>
+
+  <!-- Static Top Dual-Brand Navbar (Split 2 Halves) -->
+  <header class="top-brand-navbar" role="banner" aria-label="Brand Header">
+    <!-- Left Half: MakHubby -->
+    <a href="https://makhubby.in" target="_blank" rel="noopener noreferrer" class="nav-brand-half left-half" title="Visit makhubby.in">
+      <img src="https://www.google.com/s2/favicons?domain=makhubby.in&sz=128" alt="MakHubby Logo" class="nav-brand-logo" />
+      <div class="nav-brand-meta">
+        <span class="nav-brand-title">MAKHUBBY</span>
+        <span class="nav-brand-domain cyan">makhubby.in ↗</span>
+      </div>
+    </a>
+
+    <!-- Center High-Contrast Divider -->
+    <div class="nav-center-divider"></div>
+
+    <!-- Right Half: Manikarnika Technologies -->
+    <a href="https://manikarnikatechnologies.in" target="_blank" rel="noopener noreferrer" class="nav-brand-half right-half" title="Visit manikarnikatechnologies.in">
+      <div class="nav-brand-meta" style="text-align: right;">
+        <span class="nav-brand-title">MANIKARNIKA TECHNOLOGIES</span>
+        <span class="nav-brand-domain indigo">manikarnikatechnologies.in ↗</span>
+      </div>
+      <img src="https://www.manikarnikatechnologies.in/_next/image?url=%2Ficon_logo.png&w=96&q=75" alt="Manikarnika Technologies Logo" class="nav-brand-logo" />
+    </a>
+  </header>
+
+  <!-- Laser Pointer Dot for Stage Presenter -->
+  <div class="stage-laser-pointer" id="stage-laser-dot"></div>
+
+  <!-- Stage Blackout Overlay (Press 'B') -->
+  <div class="stage-blackout-overlay" id="stage-blackout-screen"></div>
+
+  <!-- Subtle Ambient Constellation VFX Canvas -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- Top Progress Indicator Bar -->
+  <div class="progress-bar-container" style="top: 84px;">
+    <div class="progress-bar-fill" id="hud-progress-bar"></div>
+  </div>
+
+  <!-- Main 16:9 Presentation Viewport -->
+  <main class="presentation-viewport">
+    <div class="presentation-stage">
+
+      <!-- ====================================================================
+           SCENE 01: BEFORE EVERYTHING
+           ==================================================================== -->
+      <section class="scene active" id="scene-01" aria-label="Before Everything">
+        <div class="sc1-date">01.01.2026</div>
+        <h1 class="keynote-hero">It started with an idea.</h1>
+        <p class="keynote-sub">What if university life had a platform built around the students themselves?</p>
+        <div class="sc1-light-point"></div>
+      </section>
+
+      <!-- ====================================================================
+           SCENE 02: THE PROBLEM (SCATTERED)
+           ==================================================================== -->
+      <section class="scene" id="scene-02" aria-label="The Problem">
+        <div class="scattered-words-container">
+          <span class="scattered-word sc-word-1">NOTES</span>
+          <span class="scattered-word sc-word-2">ASSIGNMENTS</span>
+          <span class="scattered-word sc-word-3">EXAMS</span>
+          <span class="scattered-word sc-word-4">RESOURCES</span>
+          <span class="scattered-word sc-word-5">FACULTY</span>
+          <span class="scattered-word sc-word-6">OPPORTUNITIES</span>
+          <span class="scattered-word sc-word-7">COMMUNITY</span>
+          <span class="scattered-word sc-word-8">INFORMATION</span>
+        </div>
+        <h2 class="keynote-title text-red">EVERYTHING WAS SCATTERED.</h2>
+        <p class="keynote-sub text-cyan" style="font-weight:700;">SO WE STARTED BUILDING.</p>
+      </section>
+
+      <!-- ====================================================================
+           SCENE 03: THE DECISION
+           ==================================================================== -->
+      <section class="scene" id="scene-03" aria-label="The Decision">
+        <div class="decision-ladder">
+          <div class="decision-step">ONE PROBLEM.</div>
+          <div class="decision-step">ONE IDEA.</div>
+          <div class="decision-step">ONE DECISION.</div>
+        </div>
+        <h2 class="keynote-hero text-cyan">BUILD IT.</h2>
+      </section>
+
+      <!-- ====================================================================
+           SCENE 04: THE JOURNEY BEGINS
+           ==================================================================== -->
+      <section class="scene" id="scene-04" aria-label="The Journey Begins">
+        <div class="stage-tag">TIMELINE INITIATED • 01 JAN 2026</div>
+        <h2 class="keynote-title">TIME PASSED.<br>THE WORK DIDN'T STOP.</h2>
+        
+        <div class="timeline-h-container">
+          <div class="timeline-h-node"><div class="node-dot"></div><span class="node-label">JAN</span></div>
+          <span class="timeline-arrow">→</span>
+          <div class="timeline-h-node"><div class="node-dot"></div><span class="node-label">FEB</span></div>
+          <span class="timeline-arrow">→</span>
+          <div class="timeline-h-node"><div class="node-dot"></div><span class="node-label">MAR</span></div>
+          <span class="timeline-arrow">→</span>
+          <div class="timeline-h-node"><div class="node-dot"></div><span class="node-label">APR</span></div>
+          <span class="timeline-arrow">→</span>
+          <div class="timeline-h-node"><div class="node-dot"></div><span class="node-label">MAY</span></div>
+          <span class="timeline-arrow">→</span>
+          <div class="timeline-h-node"><div class="node-dot"></div><span class="node-label">JUN</span></div>
+          <span class="timeline-arrow">→</span>
+          <div class="timeline-h-node"><div class="node-dot"></div><span class="node-label">JUL</span></div>
+          <span class="timeline-arrow">→</span>
+          <div class="timeline-h-node"><div class="node-dot"></div><span class="node-label">AUG</span></div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SCENE 05: THE CLOCK (CLEAN PURE NUMBERS)
+           ==================================================================== -->
+      <section class="scene" id="scene-05" aria-label="The Clock">
+        <div class="clock-clean-stack">
+          <div class="clock-clean-row">
+            <span class="clock-val num-days">0</span>
+            <span class="clock-tag">DAYS OF BUILDING</span>
+          </div>
+          <div class="clock-clean-row">
+            <span class="clock-val num-hours">0</span>
+            <span class="clock-tag">DEV HOURS (18H / DAY)</span>
+          </div>
+          <div class="clock-clean-row">
+            <span class="clock-val num-seconds">0</span>
+            <span class="clock-tag">MEASURED SECONDS</span>
+          </div>
+        </div>
+        <p class="keynote-sub">
+          Because some things aren't measured in seconds.
+        </p>
+      </section>
+
+      <!-- ====================================================================
+           SCENE 06: THE EFFORT
+           ==================================================================== -->
+      <section class="scene" id="scene-06" aria-label="The Effort">
+        <div class="effort-cloud">
+          <span class="effort-tag highlight">IDEAS</span>
+          <span class="effort-tag">DESIGNS</span>
+          <span class="effort-tag highlight">CODE</span>
+          <span class="effort-tag">TESTING</span>
+          <span class="effort-tag highlight">DEBUGGING</span>
+          <span class="effort-tag">REBUILDING</span>
+          <span class="effort-tag highlight">LATE NIGHTS</span>
+          <span class="effort-tag">EARLY MORNINGS</span>
+          <span class="effort-tag highlight">TRYING AGAIN</span>
+        </div>
+        <h2 class="keynote-hero text-cyan">18 HOURS A DAY.</h2>
+        <p class="keynote-sub">Because building something from nothing takes more than time.</p>
+      </section>
+
+      <!-- ====================================================================
+           SCENE 07: THE BUILD
+           ==================================================================== -->
+      <section class="scene" id="scene-07" aria-label="The Build">
+        <div class="build-hero-block">
+          <div class="build-grand-num num-code">0</div>
+          <div class="build-grand-lbl">LINES OF SOURCE CODE</div>
+          <div class="build-sub-stats">
+            <span><strong class="text-cyan num-folders">0</strong> Folders</span>
+            <span>•</span>
+            <span><strong class="text-cyan num-files">0</strong> Source Files</span>
+            <span>•</span>
+            <span><strong class="text-cyan num-total">0</strong> Total Lines</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SCENE 08: WHAT'S UNDER THE HOOD
+           ==================================================================== -->
+      <section class="scene" id="scene-08" aria-label="What's Under The Hood">
+        <div class="stage-tag">ARCHITECTURAL ECOSYSTEM</div>
+        <div class="arch-clean-list">
+          <div class="arch-clean-item">
+            <span class="arch-layer-name">Flutter Application Core</span>
+            <span class="arch-layer-stat">60,655 lines</span>
+          </div>
+          <div class="arch-clean-item">
+            <span class="arch-layer-name">Native Android Platform</span>
+            <span class="arch-layer-stat">3,396 lines</span>
+          </div>
+          <div class="arch-clean-item">
+            <span class="arch-layer-name">Automated Regression Tests</span>
+            <span class="arch-layer-stat">2,794 lines</span>
+          </div>
+          <div class="arch-clean-item">
+            <span class="arch-layer-name">Desktop Native Integrations</span>
+            <span class="arch-layer-stat">2,150 lines</span>
+          </div>
+          <div class="arch-clean-item">
+            <span class="arch-layer-name">Backend Cloud Functions</span>
+            <span class="arch-layer-stat">1,848 lines</span>
+          </div>
+        </div>
+        <h3 class="keynote-sub text-white" style="font-weight:700;">
+          ONE PRODUCT. AN ENTIRE ECOSYSTEM BEHIND IT.
+        </h3>
+      </section>
+
+      <!-- ====================================================================
+           SCENE 09: IT BROKE
+           ==================================================================== -->
+      <section class="scene" id="scene-09" aria-label="It Broke">
+        <h2 class="keynote-hero text-red">IT BROKE.</h2>
+        <h3 class="keynote-title" style="color: #ffffff; margin: 0.5rem 0;">A LOT.</h3>
+        
+        <div class="glitch-word-list">
+          <span>BUGS</span>
+          <span>•</span>
+          <span>CRASHES</span>
+          <span>•</span>
+          <span>FAILED BUILDS</span>
+          <span>•</span>
+          <span>REDESIGNS</span>
+        </div>
+
+        <h2 class="keynote-title text-cyan" style="margin-top: 2rem;">BUT WE KEPT BUILDING.</h2>
+      </section>
+
+      <!-- ====================================================================
+           SCENE 10: JOURNEY THROUGH THE MONTHS
+           ==================================================================== -->
+      <section class="scene" id="scene-10" aria-label="Months Progression">
+        <div class="stage-tag">243 DAYS OF EVOLUTION</div>
+        <div class="months-clean-strip">
+          <div class="month-chip">
+            <span class="month-chip-name">JANUARY</span>
+            <span class="month-chip-title">IDEA</span>
+          </div>
+          <div class="month-chip">
+            <span class="month-chip-name">FEBRUARY</span>
+            <span class="month-chip-title">FIRST BUILD</span>
+          </div>
+          <div class="month-chip">
+            <span class="month-chip-name">MARCH</span>
+            <span class="month-chip-title">CHALLENGES</span>
+          </div>
+          <div class="month-chip">
+            <span class="month-chip-name">APRIL</span>
+            <span class="month-chip-title">REBUILD</span>
+          </div>
+          <div class="month-chip">
+            <span class="month-chip-name">MAY</span>
+            <span class="month-chip-title">GROWTH</span>
+          </div>
+          <div class="month-chip">
+            <span class="month-chip-name">JUNE</span>
+            <span class="month-chip-title">SCALE</span>
+          </div>
+          <div class="month-chip">
+            <span class="month-chip-name">JULY</span>
+            <span class="month-chip-title">TEST & QA</span>
+          </div>
+          <div class="month-chip">
+            <span class="month-chip-name">AUGUST</span>
+            <span class="month-chip-title">READY?</span>
+          </div>
+        </div>
+        <h2 class="keynote-hero text-cyan" style="margin-top: 1rem;">YES.</h2>
+      </section>
+
+      <!-- ====================================================================
+           SCENE 11: HERO MAKHUBBY LOGO (HALF SCREEN SPOTLIGHT)
+           ==================================================================== -->
+      <section class="scene" id="scene-11" aria-label="Product Reveal">
+        <div class="hero-spotlight-showcase">
+          <div class="hero-halo-backdrop">
+            <img src="https://www.google.com/s2/favicons?domain=makhubby.in&sz=128" alt="MakHubby Logo" class="hero-floating-logo" />
+          </div>
+          <h1 class="hero-brand-headline">MAKHUBBY</h1>
+          <p class="hero-brand-subline">THE STUDENT OPERATING ECOSYSTEM</p>
+        </div>
+
+        <p class="keynote-sub text-white" style="margin-top: 1.5rem;">
+          And suddenly... <strong class="text-cyan">IT WASN'T JUST CODE ANYMORE.</strong>
+        </p>
+      </section>
+
+      <!-- ====================================================================
+           SCENE 12: WHAT IS MAKHUBBY?
+           ==================================================================== -->
+      <section class="scene" id="scene-12" aria-label="What is MakHubby">
+        <div class="pillars-pure-row">
+          <span class="pillar-word">LEARN.</span>
+          <span class="pillar-word">CONNECT.</span>
+          <span class="pillar-word">DISCOVER.</span>
+          <span class="pillar-word">CREATE.</span>
+          <span class="pillar-word">GROW.</span>
+        </div>
+        <h2 class="keynote-hero" style="margin-top: 1.5rem;">
+          ONE PLATFORM.<br>
+          <span class="text-cyan">ONE STUDENT ECOSYSTEM.</span>
+        </h2>
+      </section>
+
+      <!-- ====================================================================
+           SCENE 13: MANIKARNIKA TECHNOLOGIES (DEDICATED STAGE SCREEN)
+           ==================================================================== -->
+      <section class="scene" id="scene-13" aria-label="Manikarnika Technologies">
+        <div class="manikarnika-spotlight-showcase">
+          <div class="stage-tag" style="color:var(--text-sub);">POWERED & BROUGHT TO YOU BY</div>
+          
+          <div class="manikarnika-halo-backdrop">
+            <img src="https://www.manikarnikatechnologies.in/_next/image?url=%2Ficon_logo.png&w=96&q=75" alt="Manikarnika Technologies Logo" class="manikarnika-floating-logo" />
+          </div>
+
+          <h2 class="keynote-title" style="letter-spacing:-0.03em;">MANIKARNIKA TECHNOLOGIES</h2>
+          
+          <a href="https://manikarnikatechnologies.in" target="_blank" rel="noopener noreferrer" class="company-clean-link">
+            manikarnikatechnologies.in ↗
+          </a>
+
+          <div class="company-values-row">
+            <span>Technology</span>
+            <span>•</span>
+            <span>Innovation</span>
+            <span>•</span>
+            <span>Execution</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SCENE 14: BUT WHY STOP HERE?
+           ==================================================================== -->
+      <section class="scene" id="scene-14" aria-label="Why Stop Here">
+        <h2 class="keynote-title">
+          CAN WE BUILD SOMETHING BETTER?
+        </h2>
+        <p class="keynote-hero text-cyan" style="margin: 1.5rem 0;">
+          THE ANSWER BECAME MAKHUBBY.
+        </p>
+        <h3 class="keynote-hero text-white">
+          BUT WHY STOP HERE?
+        </h3>
+      </section>
+
+      <!-- ====================================================================
+           SCENE 15: FROM ONE UNIVERSITY TO INDIA
+           ==================================================================== -->
+      <section class="scene" id="scene-15" aria-label="From MAKAUT to India Map">
+        <div class="stage-tag">EXPANDING HORIZONS • MAKAUT → INDIA</div>
+        
+        <div class="map-canvas-container">
+          <canvas id="india-map-canvas"></canvas>
+        </div>
+
+        <h2 class="keynote-title" style="margin-top: 0.5rem;">
+          FROM ONE UNIVERSITY TO <span class="text-cyan">INDIA.</span>
+        </h2>
+      </section>
+
+      <!-- ====================================================================
+           SCENE 16: THE VISION
+           ==================================================================== -->
+      <section class="scene" id="scene-16" aria-label="The Vision">
+        <h2 class="keynote-hero">
+          MAKAUT WAS THE BEGINNING.<br>
+          <span class="text-cyan">INDIA IS THE VISION.</span>
+        </h2>
+
+        <div class="vision-nodes-row">
+          <span>UNIVERSITIES</span>
+          <span>•</span>
+          <span>STUDENTS</span>
+          <span>•</span>
+          <span>FACULTY</span>
+          <span>•</span>
+          <span>COMMUNITIES</span>
+        </div>
+
+        <h3 class="keynote-title text-emerald" style="margin-top: 1rem;">
+          CONNECTED.
+        </h3>
+      </section>
+
+      <!-- ====================================================================
+           SCENE 17: THIS IS NOT THE END
+           ==================================================================== -->
+      <section class="scene" id="scene-17" aria-label="Compressed Timeline">
+        <div class="vert-simple-journey">
+          <div>01.01.2026</div>
+          <div class="text-cyan">↓</div>
+          <div>AN IDEA → A DECISION</div>
+          <div class="text-cyan">↓</div>
+          <div>BUILD → FAIL → REBUILD</div>
+          <div class="text-cyan">↓</div>
+          <div class="highlight">73,500+ LINES OF CODE</div>
+          <div class="text-cyan">↓</div>
+          <div>A PRODUCT → A LAUNCH</div>
+        </div>
+
+        <h2 class="keynote-title text-white" style="margin-top: 2rem;">
+          THIS IS NOT THE END.
+        </h2>
+      </section>
+
+      <!-- ====================================================================
+           SCENE 18: RISING FROM HERE
+           ==================================================================== -->
+      <section class="scene" id="scene-18" aria-label="Rising From Here">
+        <div class="decision-ladder">
+          <div class="decision-step">WE STARTED HERE.</div>
+          <div class="decision-step text-cyan" style="font-size: clamp(2.6rem, 5.5vw, 4.5rem);">NOW WE RISE.</div>
+        </div>
+        <h2 class="keynote-hero" style="font-size: clamp(4.5rem, 10vw, 9rem);">
+          MAKHUBBY
+        </h2>
+      </section>
+
+      <!-- ====================================================================
+           SCENE 19: LAUNCH IS LIVE
+           ==================================================================== -->
+      <section class="scene" id="scene-19" aria-label="MakHubby is Live">
+        <div class="launch-pure-stage">
+          <div class="hero-halo-backdrop">
+            <img src="https://www.google.com/s2/favicons?domain=makhubby.in&sz=128" alt="MakHubby Logo" class="hero-floating-logo" style="width:clamp(160px, 20vw, 220px); height:clamp(160px, 20vw, 220px);" />
+          </div>
+
+          <h2 class="keynote-hero text-emerald" style="margin: 0.5rem 0;">
+            MAKHUBBY IS LIVE.
+          </h2>
+
+          <p class="keynote-sub text-white" style="margin-bottom: 2rem;">
+            Web + Android &nbsp;•&nbsp; <strong>makhubby.in</strong>
+          </p>
+
+          <div class="launch-actions-row">
+            <a href="https://makhubby.in" target="_blank" rel="noopener noreferrer" class="launch-direct-btn">
+              <span>LAUNCH MAKHUBBY ↗</span>
+            </a>
+
+            <div class="launch-qr-block">
+              <svg class="qr-pure-svg" viewBox="0 0 100 100">
+                <rect width="100" height="100" fill="#ffffff" />
+                <path d="M10,10 h25 v25 h-25 z M15,15 v15 h15 v-15 z M20,20 h5 v5 h-5 z" fill="#000000"/>
+                <path d="M65,10 h25 v25 h-25 z M70,15 v15 h15 v-15 z M75,20 h5 v5 h-5 z" fill="#000000"/>
+                <path d="M10,65 h25 v25 h-25 z M15,70 v15 h15 v-15 z M20,75 h5 v5 h-5 z" fill="#000000"/>
+                <rect x="42" y="15" width="16" height="6" fill="#000000"/>
+                <rect x="45" y="25" width="10" height="10" fill="#000000"/>
+                <rect x="42" y="42" width="16" height="16" fill="#38bdf8"/>
+                <rect x="15" y="45" width="20" height="6" fill="#000000"/>
+                <rect x="65" y="45" width="20" height="6" fill="#000000"/>
+                <rect x="65" y="65" width="10" height="10" fill="#000000"/>
+                <rect x="80" y="75" width="10" height="15" fill="#000000"/>
+                <rect x="45" y="70" width="12" height="20" fill="#000000"/>
+              </svg>
+              <span style="font-family:var(--font-mono); font-size:0.85rem; font-weight:700; color:var(--text-sub);">SCAN TO OPEN</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SCENE 20: CLOSING FINALE (PURE DUAL LOGOS)
+           ==================================================================== -->
+      <section class="scene" id="scene-20" aria-label="Closing Finale">
+        <div class="closing-dual-logos">
+          <div class="closing-logo-unit">
+            <img src="https://www.google.com/s2/favicons?domain=makhubby.in&sz=128" alt="MakHubby Logo" class="closing-logo-img" />
+            <span class="closing-brand-name">MAKHUBBY</span>
+          </div>
+
+          <div class="closing-plus">+</div>
+
+          <div class="closing-logo-unit">
+            <img src="https://www.manikarnikatechnologies.in/_next/image?url=%2Ficon_logo.png&w=96&q=75" alt="Manikarnika Technologies Logo" class="closing-logo-img" />
+            <span class="closing-brand-name">MANIKARNIKA</span>
+          </div>
+        </div>
+
+        <h3 class="keynote-sub text-white" style="font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight:800; margin-bottom: 2rem;">
+          BUILT HERE. MADE FOR EVERYWHERE.
+        </h3>
+
+        <h2 class="keynote-hero text-cyan" style="margin-top: 1rem;">
+          LET'S RISE.
+        </h2>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ====================================================================
+       PRESENTER HUD & REHEARSAL TOOLBAR
+       ==================================================================== -->
+  <footer class="presenter-hud" role="toolbar" aria-label="Presentation Controls">
+    <!-- Scene Navigation -->
+    <button class="hud-btn" id="hud-prev" title="Previous Scene (←)">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="m15 18-6-6 6-6"/></svg>
+      <span>Prev</span>
+    </button>
+    
+    <div class="hud-counter" id="hud-scene-counter">01 / 20</div>
+
+    <button class="hud-btn" id="hud-next" title="Next Scene (Space / →)">
+      <span>Next</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="m9 18 6-6-6-6"/></svg>
+    </button>
+
+    <div class="hud-divider"></div>
+
+    <!-- Stage Tools -->
+    <button class="hud-btn" id="hud-audio" title="Toggle Sound Synth (M)">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
+      <span class="btn-label">Audio</span>
+    </button>
+
+    <button class="hud-btn" id="hud-laser" title="Toggle Virtual Laser Pointer (L)">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v4m0 12v4M2 12h4m12 0h4"/></svg>
+      <span>Laser</span>
+    </button>
+
+    <button class="hud-btn" id="hud-blackout" title="Stage Blackout (B)">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+      <span>Blank</span>
+    </button>
+
+    <button class="hud-btn" id="hud-drawer-toggle" title="Jump to Scene (P)">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 3v18"/><path d="m14 9 3 3-3 3"/></svg>
+      <span>Scenes</span>
+    </button>
+
+    <div class="hud-divider"></div>
+
+    <!-- Screen & Time Controls -->
+    <button class="hud-btn icon-only" id="hud-fullscreen" title="Toggle Fullscreen (F)">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
+    </button>
+
+    <button class="hud-btn icon-only" id="hud-help-btn" title="Keyboard Shortcuts (?)">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
+    </button>
+
+    <span class="hud-timer-badge" id="presenter-timer" title="Elapsed Time">00:00</span>
+  </footer>
+
+  <!-- ====================================================================
+       PRESENTER SCENE JUMP DRAWER
+       ==================================================================== -->
+  <aside class="presenter-drawer" id="presenter-drawer" aria-label="Scene Navigator">
+    <div class="drawer-header">
+      <span class="drawer-title-text">SCENE NAVIGATOR</span>
+      <button class="drawer-close" id="drawer-close-btn" aria-label="Close Navigator">✕</button>
+    </div>
+    <div class="drawer-scene-list" id="drawer-scene-list"></div>
+  </aside>
+
+  <!-- ====================================================================
+       KEYBOARD SHORTCUTS MODAL
+       ==================================================================== -->
+  <div class="modal-overlay" id="help-modal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 style="font-size:1.3rem; color:#fff; font-weight:800;">Presenter Controls</h3>
+        <button class="drawer-close" id="help-modal-close">✕</button>
+      </div>
+      <table class="shortcuts-table">
+        <tbody>
+          <tr>
+            <td><span class="key-badge">Space</span> / <span class="key-badge">→</span></td>
+            <td>Advance to Next Scene</td>
+          </tr>
+          <tr>
+            <td><span class="key-badge">←</span></td>
+            <td>Previous Scene</td>
+          </tr>
+          <tr>
+            <td><span class="key-badge">F</span></td>
+            <td>Fullscreen Mode (16:9)</td>
+          </tr>
+          <tr>
+            <td><span class="key-badge">L</span></td>
+            <td>Virtual Laser Pointer</td>
+          </tr>
+          <tr>
+            <td><span class="key-badge">B</span></td>
+            <td>Stage Blackout / Blank Screen</td>
+          </tr>
+          <tr>
+            <td><span class="key-badge">M</span></td>
+            <td>Toggle Cinematic Sound FX</td>
+          </tr>
+          <tr>
+            <td><span class="key-badge">P</span></td>
+            <td>Jump to Scene (01 - 20)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Vanilla Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/india-map.js"></script>
+  <script src="js/scenes.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
