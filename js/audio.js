@@ -176,6 +176,32 @@ class AudioEngine {
       this.playBassImpact();
     } catch (e) {}
   }
+
+  playOpeningChord() {
+    if (this.isMuted || !this.ctx) return;
+    try {
+      const freqs = [130.81, 196.00, 261.63, 392.00, 523.25]; // C3, G3, C4, G4, C5 royal chord
+      const now = this.ctx.currentTime;
+      
+      freqs.forEach((freq, idx) => {
+        const osc = this.ctx.createOscillator();
+        const gain = this.ctx.createGain();
+        
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(freq, now + idx * 0.08);
+        
+        gain.gain.setValueAtTime(0, now);
+        gain.gain.linearRampToValueAtTime(0.2 / freqs.length, now + idx * 0.08 + 0.15);
+        gain.gain.exponentialRampToValueAtTime(0.0001, now + 4.0);
+        
+        osc.connect(gain);
+        gain.connect(this.masterGain);
+        
+        osc.start(now + idx * 0.08);
+        osc.stop(now + 4.2);
+      });
+    } catch (e) {}
+  }
 }
 
 window.audioEngine = new AudioEngine();

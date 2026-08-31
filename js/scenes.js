@@ -109,11 +109,12 @@ class SceneController {
     requestAnimationFrame(update);
   }
 
-  // SCENE 00: OPENING STAGE CURTAIN (SCREEN 0)
+  // SCENE 00: MANIKARNIKA CINEMATIC OPENER (SCREEN 0)
   animateScene00(el) {
     if (this.particleBg) {
       this.particleBg.setTheme('ambient');
     }
+    window.audioEngine?.playOpeningChord();
   }
 
   // SCENE 01: BEFORE EVERYTHING

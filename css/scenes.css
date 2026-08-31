@@ -1,16 +1,214 @@
-/**
- * MakHubby Launch Presentation - Aurora Neon Glow Scene Styles
- */
-
 /* ==========================================================================
-   SCENE 00: MANIKARNIKA OPENER (SCREEN 0)
+   SCENE 00: MANIKARNIKA HIGH-CONTRAST OPENER (STAGE CURTAIN)
    ========================================================================== */
-.screen0-manikarnika-showcase {
+
+/* Left & Right Flanking Side Telemetry (Fills Empty Screen Space Gracefully) */
+.sc0-side-flank {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  z-index: 3;
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.sc0-side-flank.flank-left {
+  left: 3.5rem;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.sc0-side-flank.flank-right {
+  right: 3.5rem;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.flank-line-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+}
+
+.flank-tag {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  color: var(--accent-teal-bright);
+}
+
+.flank-right .flank-tag {
+  color: var(--accent-purple-bright);
+}
+
+.flank-bar {
+  width: 130px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  overflow: hidden;
+  position: relative;
+  margin: 0.2rem 0;
+}
+
+.flank-bar-fill {
+  height: 100%;
+  width: 50%;
+  background: linear-gradient(90deg, #10b981, #34d399);
+  box-shadow: 0 0 10px #34d399;
+  animation: flankBarScan 3s infinite ease-in-out;
+}
+
+.flank-bar-fill.purple {
+  background: linear-gradient(90deg, #7c3aed, #a78bfa);
+  box-shadow: 0 0 10px #a78bfa;
+  animation: flankBarScanReverse 3s infinite ease-in-out;
+}
+
+@keyframes flankBarScan {
+  0%, 100% { transform: translateX(-100%); }
+  50% { transform: translateX(200%); }
+}
+
+@keyframes flankBarScanReverse {
+  0%, 100% { transform: translateX(200%); }
+  50% { transform: translateX(-100%); }
+}
+
+.flank-metric {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--text-dim);
+}
+
+.flank-laser-beam {
+  width: 2px;
+  height: 140px;
+  background: linear-gradient(180deg, transparent, rgba(52, 211, 153, 0.6), transparent);
+  box-shadow: 0 0 12px rgba(52, 211, 153, 0.4);
+  animation: laserPulseY 4s infinite ease-in-out;
+}
+
+.flank-laser-beam.purple {
+  background: linear-gradient(180deg, transparent, rgba(167, 139, 250, 0.6), transparent);
+  box-shadow: 0 0 12px rgba(167, 139, 250, 0.4);
+}
+
+@keyframes laserPulseY {
+  0%, 100% { opacity: 0.3; transform: scaleY(0.7); }
+  50% { opacity: 1; transform: scaleY(1.1); }
+}
+
+/* Four Corner Technical HUD Crosshairs */
+.sc0-corner-mark {
+  position: absolute;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--text-dim);
+  opacity: 0.5;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.sc0-corner-mark.top-left { top: 2rem; left: 3rem; }
+.sc0-corner-mark.top-right { top: 2rem; right: 3rem; }
+.sc0-corner-mark.bottom-left { bottom: 2rem; left: 3rem; }
+.sc0-corner-mark.bottom-right { bottom: 2rem; right: 3rem; }
+
+.sc0-high-contrast-hero {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+  position: relative;
+  z-index: 5;
+}
+
+/* Massive Glowing Logo Frame */
+.sc0-logo-frame {
+  position: relative;
+  width: clamp(220px, 28vw, 320px);
+  height: clamp(220px, 28vw, 320px);
+  border-radius: 48px;
+  background: #ffffff;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid #ffffff;
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.95),
+              0 0 60px rgba(124, 58, 237, 0.6),
+              0 0 120px rgba(139, 92, 246, 0.35);
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.sc0-logo-frame:hover {
+  transform: scale(1.03);
+}
+
+.sc0-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* High-Contrast "BROUGHT TO YOU BY" Badge */
+.sc0-badge-brought {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #7c3aed 0%, #4c1d95 100%);
+  color: #ffffff;
+  font-family: var(--font-main);
+  font-size: clamp(0.95rem, 1.4vw, 1.25rem);
+  font-weight: 900;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  padding: 0.65rem 2.2rem;
+  border-radius: 999px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 30px rgba(124, 58, 237, 0.5);
+  margin-bottom: 1.2rem;
+}
+
+/* Crisp Solid White Headline */
+.sc0-headline-white {
+  font-family: var(--font-main);
+  font-size: clamp(3rem, 7vw, 5.8rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin: 0.5rem 0 1.2rem 0;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.9);
+}
+
+/* Domain Badge */
+.sc0-domain-badge {
+  font-family: var(--font-mono);
+  font-size: clamp(1.1rem, 1.8vw, 1.45rem);
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: var(--accent-purple-bright);
+  background: rgba(139, 92, 246, 0.12);
+  padding: 0.5rem 1.6rem;
+  border-radius: 12px;
+  border: 1.5px solid rgba(167, 139, 250, 0.35);
+  display: inline-block;
+  margin-top: 0.5rem;
 }
 
 

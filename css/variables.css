@@ -9,19 +9,19 @@
   --bg-surface: #06090e;
   --bg-card: rgba(10, 15, 26, 0.85);
 
-  /* Aurora Emerald Teal (MakHubby) */
+  /* Aurora Emerald Teal (MakHubby) - Bright on Left, Dark Shadow toward Center */
   --accent-teal: #10b981;
   --accent-teal-bright: #34d399;
   --accent-teal-light: #a7f3d0;
   --accent-teal-glow: rgba(16, 185, 129, 0.45);
-  --gradient-teal: linear-gradient(135deg, #059669 0%, #047857 50%, #064e3b 100%);
+  --gradient-teal: linear-gradient(to right, #059669 0%, #047857 45%, #064e3b 100%);
 
-  /* Deep Amethyst Purple (Manikarnika Technologies) */
+  /* Deep Amethyst Purple (Manikarnika Technologies) - Dark Shadow from Center, Bright toward Right */
   --accent-purple: #8b5cf6;
   --accent-purple-bright: #a78bfa;
   --accent-purple-light: #ddd6fe;
   --accent-purple-glow: rgba(139, 92, 246, 0.45);
-  --gradient-purple: linear-gradient(135deg, #7c3aed 0%, #6d28d9 50%, #4c1d95 100%);
+  --gradient-purple: linear-gradient(to right, #4c1d95 0%, #6d28d9 55%, #7c3aed 100%);
 
   /* Indian Tricolor (Tiranga) */
   --tricolor-saffron: #ff9933;

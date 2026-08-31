@@ -57,21 +57,59 @@
     <div class="presentation-stage">
 
       <!-- ====================================================================
-           SCENE 00: MANIKARNIKA OPENER (SCREEN 0)
+           SCENE 00: MANIKARNIKA HIGH-CONTRAST OPENER (SCREEN 0)
            ==================================================================== -->
       <section class="scene active" id="scene-00" aria-label="Brought to you by Manikarnika Technologies">
-        <div class="screen0-manikarnika-showcase">
-          <div class="manikarnika-halo-backdrop">
-            <img src="https://www.manikarnikatechnologies.in/_next/image?url=%2Ficon_logo.png&w=96&q=75" alt="Manikarnika Technologies Logo" class="manikarnika-floating-logo" style="width: clamp(240px, 32vw, 340px); height: clamp(240px, 32vw, 340px);" />
+        
+        <!-- Left Side Flanking Telemetry Stream -->
+        <aside class="sc0-side-flank flank-left" aria-hidden="true">
+          <div class="flank-line-group">
+            <span class="flank-tag">SYS // STAGE_INIT</span>
+            <div class="flank-bar"><div class="flank-bar-fill"></div></div>
+            <span class="flank-metric">FPS // 60.0</span>
+            <span class="flank-metric">LATENCY // 0.2ms</span>
+            <span class="flank-metric">STACK // NATIVE</span>
+          </div>
+          <div class="flank-laser-beam"></div>
+        </aside>
+
+        <!-- Right Side Flanking Telemetry Stream -->
+        <aside class="sc0-side-flank flank-right" aria-hidden="true">
+          <div class="flank-line-group">
+            <span class="flank-tag">DEPLOY // INDIA_SCALE</span>
+            <div class="flank-bar"><div class="flank-bar-fill purple"></div></div>
+            <span class="flank-metric">NODES // 20_UNIV</span>
+            <span class="flank-metric">CODE // 73.5K+ LOC</span>
+            <span class="flank-metric">STATUS // READY</span>
+          </div>
+          <div class="flank-laser-beam purple"></div>
+        </aside>
+
+        <!-- Four Corner Tech Crosshairs -->
+        <div class="sc0-corner-mark top-left"><span>[ 00 // PRE-SHOW ]</span></div>
+        <div class="sc0-corner-mark top-right"><span>[ KEYNOTE '26 ]</span></div>
+        <div class="sc0-corner-mark bottom-left"><span>[ ARCH // PRODUCTION ]</span></div>
+        <div class="sc0-corner-mark bottom-right"><span>[ STAGE // ACTIVE ]</span></div>
+
+        <!-- Center Stage Hero Content -->
+        <div class="sc0-high-contrast-hero">
+          
+          <!-- Massive Glowing Manikarnika Logo -->
+          <div class="sc0-logo-frame">
+            <img src="https://www.manikarnikatechnologies.in/_next/image?url=%2Ficon_logo.png&w=96&q=75" alt="Manikarnika Technologies Logo" class="sc0-logo-img" />
           </div>
 
-          <p class="stage-tag" style="color: var(--accent-purple-bright); font-size: clamp(1rem, 1.8vw, 1.4rem); letter-spacing: 0.25em; margin: 1.5rem 0 0.8rem 0;">
-            BROUGHT TO YOU BY
-          </p>
-
-          <h1 class="keynote-hero" style="font-size: clamp(2.8rem, 6.5vw, 5.5rem); letter-spacing: -0.02em; margin: 0;">
-            MANIKARNIKA TECHNOLOGIES
+          <!-- High-Contrast Bold Typography -->
+          <div class="sc0-badge-brought">BROUGHT TO YOU BY</div>
+          
+          <h1 class="sc0-headline-white">
+            MANIKARNIKA<br/>TECHNOLOGIES
           </h1>
+
+          <div class="sc0-domain-badge">
+            manikarnikatechnologies.in
+          </div>
+
         </div>
       </section>
 
