@@ -211,6 +211,17 @@ html, body {
   letter-spacing: -0.01em;
 }
 
+/* Indian Tricolor Typography */
+.text-tricolor {
+  background: var(--gradient-tricolor-h);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+  font-weight: 900;
+  filter: drop-shadow(0 0 20px rgba(255, 153, 51, 0.4));
+}
+
 /* Aurora Accents */
 .text-teal {
   color: var(--accent-teal-bright);

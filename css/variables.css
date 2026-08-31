@@ -23,6 +23,13 @@
   --accent-purple-glow: rgba(139, 92, 246, 0.45);
   --gradient-purple: linear-gradient(135deg, #7c3aed 0%, #6d28d9 50%, #4c1d95 100%);
 
+  /* Indian Tricolor (Tiranga) */
+  --tricolor-saffron: #ff9933;
+  --tricolor-white: #ffffff;
+  --tricolor-green: #138808;
+  --gradient-tricolor: linear-gradient(135deg, #ff9933 0%, #ffffff 50%, #138808 100%);
+  --gradient-tricolor-h: linear-gradient(90deg, #ff9933 0%, #ffaa55 25%, #ffffff 50%, #4ade80 75%, #138808 100%);
+
   /* Secondary Accents */
   --accent-cyan: #38bdf8;
   --accent-cyan-glow: rgba(56, 189, 248, 0.4);
