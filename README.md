@@ -2,9 +2,9 @@
 
 <br/>
 
-<img src="https://www.google.com/s2/favicons?domain=makhubby.in&sz=128" width="90" height="90" alt="MakHubby Logo" style="border-radius: 20px; box-shadow: 0 8px 30px rgba(56, 189, 248, 0.4); padding: 6px; background: #ffffff;" />
+<img src="https://www.google.com/s2/favicons?domain=makhubby.in&sz=128" width="92" height="92" alt="MakHubby Logo" style="border-radius: 22px; box-shadow: 0 10px 35px rgba(16, 185, 129, 0.45); padding: 5px; background: #ffffff;" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<img src="https://www.manikarnikatechnologies.in/_next/image?url=%2Ficon_logo.png&w=96&q=75" width="90" height="90" alt="Manikarnika Technologies Logo" style="border-radius: 20px; box-shadow: 0 8px 30px rgba(129, 140, 248, 0.4); padding: 6px; background: #ffffff;" />
+<img src="https://www.manikarnikatechnologies.in/_next/image?url=%2Ficon_logo.png&w=96&q=75" width="92" height="92" alt="Manikarnika Technologies Logo" style="border-radius: 22px; box-shadow: 0 10px 35px rgba(139, 92, 246, 0.45); padding: 5px; background: #ffffff;" />
 
 # MAKHUBBY
 ### *The Student Operating Ecosystem*
@@ -20,13 +20,13 @@
 ```
 
 **An Apple Keynote-style cinematic launch presentation engineered for live projection.**  
-*Built for MAKAUT. Expanding to India. Powered by [Manikarnika Technologies](https://manikarnikatechnologies.in).*
+*Theme: **Aurora Neon Glow** (Emerald Teal + Amethyst Purple). Powered by [Manikarnika Technologies](https://manikarnikatechnologies.in).*
 
 <br/>
 
-[![Live Portal](https://img.shields.io/badge/Official%20App-makhubby.in-38bdf8?style=for-the-badge&logo=googlechrome&logoColor=white)](https://makhubby.in)
-[![Corporate Parent](https://img.shields.io/badge/Powered%20By-Manikarnika%20Technologies-818cf8?style=for-the-badge&logo=shield&logoColor=white)](https://manikarnikatechnologies.in)
-[![Launch Date](https://img.shields.io/badge/Launch%20Day-01.09.2026-10b981?style=for-the-badge&logo=clock&logoColor=white)](https://makhubby.in)
+[![Live Portal](https://img.shields.io/badge/Official%20App-makhubby.in-10b981?style=for-the-badge&logo=googlechrome&logoColor=white)](https://makhubby.in)
+[![Corporate Parent](https://img.shields.io/badge/Powered%20By-Manikarnika%20Technologies-8b5cf6?style=for-the-badge&logo=shield&logoColor=white)](https://manikarnikatechnologies.in)
+[![Launch Date](https://img.shields.io/badge/Launch%20Day-01.09.2026-34d399?style=for-the-badge&logo=clock&logoColor=white)](https://makhubby.in)
 [![Tech Stack](https://img.shields.io/badge/Architecture-Pure%20HTML5%20%2F%20CSS3%20%2F%20JS-f59e0b?style=for-the-badge&logo=javascript&logoColor=white)](https://github.com/ABVicky/MakHubby-LAUNCH)
 
 <br/>
@@ -46,11 +46,11 @@ flowchart LR
     C --> D["🚀 LAUNCH DAY<br/>makhubby.in LIVE"]
     D --> E["🇮🇳 EXPANSION<br/>MAKAUT ➔ INDIA"]
     
-    style A fill:#0f172a,stroke:#38bdf8,stroke-width:2px,color:#fff
-    style B fill:#0f172a,stroke:#f59e0b,stroke-width:2px,color:#fff
-    style C fill:#0f172a,stroke:#ef4444,stroke-width:2px,color:#fff
-    style D fill:#0f172a,stroke:#10b981,stroke-width:2px,color:#fff
-    style E fill:#0f172a,stroke:#818cf8,stroke-width:2px,color:#fff
+    style A fill:#064e3b,stroke:#34d399,stroke-width:2px,color:#fff
+    style B fill:#1e1b4b,stroke:#a78bfa,stroke-width:2px,color:#fff
+    style C fill:#064e3b,stroke:#10b981,stroke-width:2px,color:#fff
+    style D fill:#1e1b4b,stroke:#8b5cf6,stroke-width:2px,color:#fff
+    style E fill:#064e3b,stroke:#6ee7b7,stroke-width:2px,color:#fff
 ```
 
 ### 📖 Narrative Blueprint
@@ -62,8 +62,8 @@ flowchart LR
    - 243 days. 18 hours every single day. 15,746,400 measured seconds.
    - Crashes, bugs, architectural bottlenecks, and complete rewrites. We didn't quit — we re-engineered.
 3. **Act III: The Breakthrough & The Identity (Scenes 11–13)**
-   - `73,500+ lines of code` suddenly became more than a software repository — it became **MakHubby**.
-   - Backed by the engineering muscle and vision of **Manikarnika Technologies**.
+   - `73,500+ lines of code` suddenly became more than a software repository — it became **MakHubby** (Aurora Emerald Teal).
+   - Backed by the engineering muscle and vision of **Manikarnika Technologies** (Amethyst Purple).
 4. **Act IV: The Horizon (Scenes 14–20)**
    - MAKAUT was just the testing ground. The destination is connecting 40+ million college students across India.
 
@@ -98,14 +98,14 @@ flowchart LR
 
 ---
 
-## 🎮 Stage & Projector Superpowers
+## 📽️ Auditorium & Stage Projector Superpowers
 
 Engineered from the ground up for massive auditorium screens, dual laser projectors, and presenter confidence:
 
 | Feature | Trigger | What Happens on Stage |
 | :--- | :---: | :--- |
-| **🏛️ Static Dual-Brand Header** | *Always On* | Massive `84px` top bar divided 50/50: **MakHubby** (Cyan) on left, **Manikarnika** (Indigo) on right with `62px` logos. |
-| **🔴 Virtual Stage Laser** | <kbd>L</kbd> | Displays a high-lumen glowing red laser dot that follows the cursor for pinpointing numbers and map nodes. |
+| **🏛️ Aurora Neon Dual Header** | *Always On* | Massive `84px` top bar: **MakHubby** (Emerald Teal) on left, **Manikarnika** (Amethyst Purple) on right with `62px` logos. |
+| **🔴 Virtual Stage Laser** | <kbd>L</kbd> | High-lumen glowing red laser dot tracking cursor movement for pinpointing numbers and map nodes. |
 | **⬛ Stage Blackout Mode** | <kbd>B</kbd> or <kbd>.</kbd> | Instantly blanks the projection screen to black when the speaker wants 100% of the audience's attention on themselves. |
 | **🎵 Procedural Audio Engine** | <kbd>M</kbd> | Procedurally synthesizes sub-bass drops, rising frequencies, and tactile clicks using native Web Audio API oscillators. |
 | **🗺️ Vector India Map** | *Scene 15* | Canvas engine calculating real-time photon beams pulsing from MAKAUT to university hubs nationwide. |

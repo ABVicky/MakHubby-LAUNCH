@@ -1,58 +1,39 @@
 /**
- * MakHubby Launch Presentation - Design Tokens & Variables
- * Premium Cinematic Apple Keynote Aesthetics
+ * MakHubby Launch Presentation - Design Tokens
+ * Theme: Aurora Neon Glow (Vibrant Emerald Teal + Deep Amethyst Purple)
  */
 
 :root {
-  /* Projector-Optimized Color Palette - High Lumen OLED Blacks & Ultra-Vibrant Accents */
-  --bg-pure-black: #000000;
-  --bg-deep-space: #030407;
-  --bg-card: rgba(13, 18, 30, 0.94);
-  --bg-card-hover: rgba(22, 30, 50, 0.98);
-  --bg-glass: rgba(15, 23, 42, 0.85);
+  /* Matte Obsidian Stage */
+  --bg-pure: #000000;
+  --bg-surface: #06090e;
+  --bg-card: rgba(10, 15, 26, 0.85);
 
-  /* High-Visibility Brand Accents (Luminance tuned for stage projectors) */
+  /* Aurora Emerald Teal (MakHubby) */
+  --accent-teal: #10b981;
+  --accent-teal-bright: #34d399;
+  --accent-teal-light: #a7f3d0;
+  --accent-teal-glow: rgba(16, 185, 129, 0.45);
+  --gradient-teal: linear-gradient(135deg, #059669 0%, #047857 50%, #064e3b 100%);
+
+  /* Deep Amethyst Purple (Manikarnika Technologies) */
+  --accent-purple: #8b5cf6;
+  --accent-purple-bright: #a78bfa;
+  --accent-purple-light: #ddd6fe;
+  --accent-purple-glow: rgba(139, 92, 246, 0.45);
+  --gradient-purple: linear-gradient(135deg, #7c3aed 0%, #6d28d9 50%, #4c1d95 100%);
+
+  /* Secondary Accents */
   --accent-cyan: #38bdf8;
-  --accent-cyan-bright: #67e8f9;
-  --accent-cyan-glow: rgba(56, 189, 248, 0.6);
-  --accent-blue: #3b82f6;
-  --accent-indigo: #818cf8;
-  --accent-violet: #a78bfa;
-  --accent-emerald: #34d399;
-  --accent-emerald-glow: rgba(52, 211, 153, 0.6);
-  --accent-amber: #fbbf24;
-  --accent-rose: #f87171;
+  --accent-cyan-glow: rgba(56, 189, 248, 0.4);
+  --accent-red: #f43f5e;
 
-  /* Typography Colors - Maximum Distance Legibility */
-  --text-pure-white: #ffffff;
-  --text-primary: #ffffff;
-  --text-secondary: #cbd5e1;
-  --text-muted: #94a3b8;
-  --text-dark: #475569;
+  /* Typography */
+  --text-white: #ffffff;
+  --text-sub: #94a3b8;
+  --text-dim: #64748b;
 
-  /* Borders & Dividers - High Contrast for Projector Optics */
-  --border-subtle: rgba(255, 255, 255, 0.14);
-  --border-glass: rgba(255, 255, 255, 0.22);
-  --border-accent: rgba(56, 189, 248, 0.55);
-
-  /* Typography Scales */
-  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
-  --font-display: 'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-mono: 'JetBrains Mono', 'Fira Code', ui-monospace, SFMono-Regular, monospace;
-
-  /* Transitions */
-  --transition-fast: 0.18s cubic-bezier(0.16, 1, 0.3, 1);
-  --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  --transition-cinematic: 0.75s cubic-bezier(0.16, 1, 0.3, 1);
-  --transition-slow: 1.2s cubic-bezier(0.16, 1, 0.3, 1);
-
-  /* Elevation & High-Lumen Glows */
-  --shadow-subtle: 0 8px 32px rgba(0, 0, 0, 0.8);
-  --shadow-cyan-glow: 0 0 45px rgba(56, 189, 248, 0.45);
-  --shadow-indigo-glow: 0 0 50px rgba(129, 140, 248, 0.4);
-  --shadow-emerald-glow: 0 0 50px rgba(52, 211, 153, 0.45);
-
-  /* Layout */
-  --aspect-ratio: 16 / 9;
-  --hud-height: 56px;
+  /* Fonts */
+  --font-main: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', system-ui, sans-serif;
+  --font-mono: 'SF Mono', 'JetBrains Mono', ui-monospace, monospace;
 }

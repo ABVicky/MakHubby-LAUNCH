@@ -1,5 +1,5 @@
 /**
- * MakHubby Launch Presentation - Clean Minimal Scene Styles
+ * MakHubby Launch Presentation - Aurora Neon Glow Scene Styles
  */
 
 /* ==========================================================================
@@ -8,18 +8,18 @@
 .sc1-date {
   font-family: var(--font-mono);
   font-size: clamp(1.4rem, 2.5vw, 2.2rem);
-  font-weight: 600;
-  color: var(--accent-cyan);
+  font-weight: 700;
+  color: var(--accent-teal-bright);
   letter-spacing: 0.25em;
   margin-bottom: 2rem;
 }
 
 .sc1-light-point {
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   background: #ffffff;
-  box-shadow: 0 0 25px #ffffff, 0 0 50px var(--accent-cyan);
+  box-shadow: 0 0 25px #ffffff, 0 0 50px var(--accent-teal-bright);
   margin-top: 3.5rem;
   transition: opacity 1.2s ease;
 }
@@ -30,7 +30,7 @@
 
 @keyframes pulseLight {
   0%, 100% { transform: scale(1); opacity: 0.8; }
-  50% { transform: scale(2.2); opacity: 1; box-shadow: 0 0 40px #ffffff, 0 0 80px var(--accent-cyan); }
+  50% { transform: scale(2.2); opacity: 1; box-shadow: 0 0 40px #ffffff, 0 0 80px var(--accent-teal-bright); }
 }
 
 
@@ -76,7 +76,7 @@
 
 .decision-step {
   font-size: clamp(1.8rem, 3.5vw, 3rem);
-  font-weight: 700;
+  font-weight: 800;
   color: var(--text-dim);
   letter-spacing: -0.02em;
 }
@@ -117,8 +117,8 @@
 }
 
 .timeline-h-node.active .node-dot {
-  background: var(--accent-cyan);
-  box-shadow: 0 0 16px var(--accent-cyan);
+  background: var(--accent-teal-bright);
+  box-shadow: 0 0 16px var(--accent-teal-bright);
 }
 
 .node-label {
@@ -139,7 +139,7 @@
 
 
 /* ==========================================================================
-   SCENE 05: THE CLOCK (CLEAN PURE NUMBERS)
+   SCENE 05: THE CLOCK (AURORA EMERALD NUMBERS)
    ========================================================================== */
 .clock-clean-stack {
   display: flex;
@@ -164,13 +164,14 @@
 }
 
 .clock-val.num-days {
-  color: var(--accent-cyan);
+  color: var(--accent-teal-bright);
+  text-shadow: 0 0 30px var(--accent-teal-glow);
 }
 
 .clock-tag {
   font-family: var(--font-mono);
   font-size: clamp(1rem, 1.8vw, 1.3rem);
-  font-weight: 700;
+  font-weight: 800;
   color: var(--text-sub);
   letter-spacing: 0.1em;
 }
@@ -202,7 +203,7 @@
 
 
 /* ==========================================================================
-   SCENE 07: THE BUILD (CLEAN ENGINEERING HERO)
+   SCENE 07: THE BUILD (AURORA EMERALD CORE)
    ========================================================================== */
 .build-hero-block {
   display: flex;
@@ -215,13 +216,14 @@
   font-size: clamp(4.5rem, 10vw, 8.5rem);
   font-weight: 900;
   line-height: 0.95;
-  color: var(--accent-cyan);
+  color: var(--accent-teal-bright);
   letter-spacing: -0.05em;
+  text-shadow: 0 0 35px var(--accent-teal-glow);
 }
 
 .build-grand-lbl {
   font-size: clamp(1.2rem, 2.2vw, 1.8rem);
-  font-weight: 700;
+  font-weight: 800;
   color: var(--text-white);
   letter-spacing: 0.1em;
   margin-top: 1rem;
@@ -230,6 +232,7 @@
 .build-sub-stats {
   font-family: var(--font-mono);
   font-size: 1.1rem;
+  font-weight: 700;
   color: var(--text-sub);
   margin-top: 2rem;
   display: flex;
@@ -238,7 +241,7 @@
 
 
 /* ==========================================================================
-   SCENE 08: WHAT'S UNDER THE HOOD (CLEAN STACK)
+   SCENE 08: WHAT'S UNDER THE HOOD
    ========================================================================== */
 .arch-clean-list {
   display: flex;
@@ -266,8 +269,8 @@
 .arch-layer-stat {
   font-family: var(--font-mono);
   font-size: 1.3rem;
-  font-weight: 700;
-  color: var(--accent-cyan);
+  font-weight: 800;
+  color: var(--accent-teal-bright);
 }
 
 
@@ -282,7 +285,7 @@
   margin: 2.5rem 0;
   font-family: var(--font-mono);
   font-size: 1.2rem;
-  font-weight: 700;
+  font-weight: 800;
   color: var(--accent-red);
 }
 
@@ -316,7 +319,7 @@
   font-family: var(--font-mono);
   font-size: 0.9rem;
   font-weight: 700;
-  color: var(--accent-cyan);
+  color: var(--accent-teal-bright);
 }
 
 .month-chip-title {
@@ -327,7 +330,7 @@
 
 
 /* ==========================================================================
-   SCENE 11: HERO MAKHUBBY LOGO (SPOTLIGHT & DISTANCE READABILITY)
+   SCENE 11: HERO MAKHUBBY LOGO (AURORA EMERALD HALO)
    ========================================================================== */
 .hero-spotlight-showcase {
   display: flex;
@@ -349,10 +352,10 @@
 .hero-halo-backdrop::before {
   content: '';
   position: absolute;
-  width: 170%;
-  height: 170%;
+  width: 180%;
+  height: 180%;
   border-radius: 50%;
-  background: radial-gradient(circle, var(--accent-cyan-glow) 0%, rgba(0, 0, 0, 0) 70%);
+  background: radial-gradient(circle, var(--accent-teal-glow) 0%, rgba(0, 0, 0, 0) 70%);
   z-index: 1;
   pointer-events: none;
 }
@@ -364,8 +367,8 @@
   object-fit: contain;
   background: #ffffff;
   padding: 24px;
-  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.95), 0 0 40px var(--accent-cyan-glow);
-  border: 3px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.95), 0 0 45px var(--accent-teal-glow);
+  border: 3px solid rgba(255, 255, 255, 0.85);
   position: relative;
   z-index: 2;
   transition: transform 0.4s ease;
@@ -378,7 +381,7 @@
   line-height: 0.95;
   color: #ffffff;
   margin: 0;
-  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+  text-shadow: 0 4px 25px rgba(0, 0, 0, 0.8);
 }
 
 .hero-brand-subline {
@@ -386,7 +389,7 @@
   font-size: clamp(1.1rem, 2.2vw, 1.6rem);
   font-weight: 800;
   letter-spacing: 0.25em;
-  color: var(--accent-cyan);
+  color: var(--accent-teal-bright);
   text-transform: uppercase;
   margin-top: 1.2rem;
 }
@@ -407,12 +410,12 @@
   font-size: clamp(2rem, 4.5vw, 3.6rem);
   font-weight: 900;
   letter-spacing: -0.02em;
-  color: var(--accent-cyan);
+  color: var(--accent-teal-bright);
 }
 
 
 /* ==========================================================================
-   SCENE 13: MANIKARNIKA TECHNOLOGIES (DEDICATED STAGE SCREEN)
+   SCENE 13: MANIKARNIKA TECHNOLOGIES (AMETHYST PURPLE STAGE SCREEN)
    ========================================================================== */
 .manikarnika-spotlight-showcase {
   display: flex;
@@ -433,10 +436,10 @@
 .manikarnika-halo-backdrop::before {
   content: '';
   position: absolute;
-  width: 170%;
-  height: 170%;
+  width: 180%;
+  height: 180%;
   border-radius: 50%;
-  background: radial-gradient(circle, var(--accent-indigo-glow) 0%, rgba(0, 0, 0, 0) 70%);
+  background: radial-gradient(circle, var(--accent-purple-glow) 0%, rgba(0, 0, 0, 0) 70%);
   z-index: 1;
   pointer-events: none;
 }
@@ -448,8 +451,8 @@
   object-fit: contain;
   background: #ffffff;
   padding: 24px;
-  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.95), 0 0 40px var(--accent-indigo-glow);
-  border: 3px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.95), 0 0 45px var(--accent-purple-glow);
+  border: 3px solid rgba(255, 255, 255, 0.85);
   position: relative;
   z-index: 2;
 }
@@ -457,7 +460,7 @@
 .company-clean-link {
   font-family: var(--font-mono);
   font-size: clamp(1.3rem, 2.4vw, 2rem);
-  color: var(--accent-cyan);
+  color: var(--accent-purple-bright);
   text-decoration: none;
   font-weight: 800;
   margin: 1.2rem 0;
@@ -503,7 +506,7 @@
   flex-wrap: wrap;
   margin: 2.5rem 0;
   font-size: 1.3rem;
-  font-weight: 700;
+  font-weight: 800;
   color: var(--text-white);
   letter-spacing: 0.05em;
 }
@@ -525,8 +528,9 @@
 }
 
 .vert-simple-journey .highlight {
-  color: var(--accent-cyan);
+  color: var(--accent-teal-bright);
   font-size: 1.5rem;
+  font-weight: 900;
 }
 
 
@@ -549,16 +553,17 @@
 }
 
 .launch-direct-btn {
-  background: var(--accent-cyan);
+  background: var(--accent-teal-bright);
   color: #000000;
   font-size: 1.2rem;
-  font-weight: 800;
+  font-weight: 900;
   padding: 1.1rem 2.2rem;
   border-radius: 12px;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
+  box-shadow: 0 0 30px var(--accent-teal-glow);
   transition: transform 0.2s ease;
 }
 
@@ -601,18 +606,19 @@
 }
 
 .closing-logo-img {
-  width: clamp(130px, 18vw, 180px);
-  height: clamp(130px, 18vw, 180px);
-  border-radius: 28px;
+  width: clamp(140px, 20vw, 190px);
+  height: clamp(140px, 20vw, 190px);
+  border-radius: 32px;
   object-fit: contain;
   background: #ffffff;
-  padding: 14px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8);
+  padding: 16px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9);
+  border: 2.5px solid rgba(255, 255, 255, 0.85);
 }
 
 .closing-brand-name {
-  font-size: 1.4rem;
-  font-weight: 800;
+  font-size: 1.5rem;
+  font-weight: 900;
   color: #ffffff;
 }
 

@@ -57,8 +57,8 @@
 }
 
 .hud-btn.active {
-  color: #38bdf8;
-  background: rgba(56, 189, 248, 0.16);
+  color: #34d399;
+  background: rgba(16, 185, 129, 0.18);
 }
 
 /* Icon-only button */
@@ -83,7 +83,7 @@
 .hud-divider {
   width: 1px;
   height: 18px;
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.14);
   margin: 0 0.15rem;
   flex-shrink: 0;
 }
@@ -93,7 +93,7 @@
   font-family: 'SF Mono', 'JetBrains Mono', ui-monospace, monospace;
   font-size: 0.82rem;
   font-weight: 600;
-  color: #64748b;
+  color: #94a3b8;
   padding: 0 0.4rem;
   white-space: nowrap;
   line-height: 1;
@@ -105,16 +105,16 @@
   top: 0;
   left: 0;
   width: 100vw;
-  height: 2.5px;
-  background: rgba(255, 255, 255, 0.05);
+  height: 3px;
+  background: rgba(255, 255, 255, 0.08);
   z-index: 100;
 }
 
 .progress-bar-fill {
   height: 100%;
   width: 5%;
-  background: #38bdf8;
-  box-shadow: 0 0 10px #38bdf8;
+  background: linear-gradient(90deg, #10b981 0%, #34d399 50%, #8b5cf6 100%);
+  box-shadow: 0 0 12px #34d399;
   transition: width 0.3s ease;
 }
 
