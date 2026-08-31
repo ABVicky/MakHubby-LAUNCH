@@ -63,9 +63,9 @@ class PresentationApp {
     this.setupProjectorFeatures();
     this.startPresenterClock();
 
-    // Check URL Hash for initial scene
+    // Check URL Hash for initial scene (e.g. #0, #1, #15)
     const hash = window.location.hash.replace('#', '');
-    const initialIndex = parseInt(hash, 10) - 1;
+    const initialIndex = parseInt(hash, 10);
     if (!isNaN(initialIndex) && initialIndex >= 0 && initialIndex < this.totalScenes) {
       this.goToScene(initialIndex, false);
     } else {
@@ -313,8 +313,8 @@ class PresentationApp {
   }
 
   updateHUD(index) {
-    const formattedCurrent = String(index + 1).padStart(2, '0');
-    const formattedTotal = String(this.totalScenes).padStart(2, '0');
+    const formattedCurrent = String(index).padStart(2, '0');
+    const formattedTotal = String(Math.max(0, this.totalScenes - 1)).padStart(2, '0');
 
     const counterEl = document.getElementById('hud-scene-counter');
     if (counterEl) {
@@ -323,8 +323,8 @@ class PresentationApp {
 
     const progressBar = document.getElementById('hud-progress-bar');
     if (progressBar) {
-      const pct = ((index + 1) / this.totalScenes) * 100;
-      progressBar.style.width = `${pct}%`;
+      const pct = (index / Math.max(1, this.totalScenes - 1)) * 100;
+      progressBar.style.width = `${Math.max(3, pct)}%`;
     }
 
     const drawerItems = document.querySelectorAll('.drawer-scene-item');

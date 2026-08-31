@@ -17,6 +17,9 @@ class SceneController {
     }
 
     switch (sceneId) {
+      case 'scene-00':
+        this.animateScene00(sceneEl);
+        break;
       case 'scene-01':
         this.animateScene01(sceneEl);
         break;
@@ -104,6 +107,13 @@ class SceneController {
       }
     };
     requestAnimationFrame(update);
+  }
+
+  // SCENE 00: OPENING STAGE CURTAIN (SCREEN 0)
+  animateScene00(el) {
+    if (this.particleBg) {
+      this.particleBg.setTheme('ambient');
+    }
   }
 
   // SCENE 01: BEFORE EVERYTHING

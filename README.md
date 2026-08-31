@@ -98,6 +98,34 @@ flowchart LR
 
 ---
 
+## 🗺️ 21-Scene Complete Keynote Storyboard
+
+| Scene | Identifier | Key Storytelling Beat |
+| :---: | :--- | :--- |
+| **00** | `Stage Curtain` | **Official Launch Event Opening Screen** (`MAKHUBBY KEYNOTE '26` • Dual Logos). |
+| **01** | `Before Everything` | `01.01.2026` — It started with an idea. |
+| **02** | `The Problem` | Scattered university resources → `SO WE STARTED BUILDING.` |
+| **03** | `The Decision` | `ONE PROBLEM. ONE IDEA. ONE DECISION. BUILD IT.` |
+| **04** | `The Journey Begins` | Horizontal chronological track initiating month-by-month progress. |
+| **05** | `The Clock` | Giant ticking stats: `243 Days`, `4,374 Dev Hours`, `15.7M Seconds`. |
+| **06** | `The Effort` | `18 HOURS A DAY.` Building something from nothing. |
+| **07** | `The Build` | Engineering scale: **`73,500+ Lines of Source Code`** (`96 Folders`, `264 Files`). |
+| **08** | `What's Under The Hood` | 6-layer architectural breakdown: Flutter Core, Android Native, Test Suite, Cloud. |
+| **09** | `It Broke` | Resilience & glitch sequence: `BUGS. CRASHES. BUT WE KEPT BUILDING.` |
+| **10** | `Months Progression` | Journey from January idea to August readiness: `ARE WE READY? YES.` |
+| **11** | `It Became Real` | **Hero MakHubby Logo Reveal** → *"IT WASN'T JUST CODE ANYMORE. IT WAS MAKHUBBY."* |
+| **12** | `What is MakHubby?` | Five Pillars: `LEARN. CONNECT. DISCOVER. CREATE. GROW.` |
+| **13** | `Manikarnika Technologies` | Parent company reveal & values: *Technology • Innovation • Execution*. |
+| **14** | `Why Stop Here?` | Transitioning from MAKAUT to national scale: `BUT WHY STOP HERE?` |
+| **15** | `From MAKAUT to India` | Exact official map of India with Tricolor gradient & laser photon university connections. |
+| **16** | `The Vision` | `MAKAUT WAS THE BEGINNING. INDIA IS THE VISION.` |
+| **17** | `This is Not the End` | Compressed vertical journey timeline rising upward. |
+| **18** | `Rising From Here` | `WE STARTED HERE. NOW WE RISE. MAKHUBBY.` |
+| **19** | `Launch is Live` | `01.09.2026` — **MAKHUBBY IS LIVE** (Web + Android `makhubby.in` + QR). |
+| **20** | `Closing Finale` | Dual brand emblems on illuminated pedestals → **`LET'S RISE.`** |
+
+---
+
 ## 📽️ Auditorium & Stage Projector Superpowers
 
 Engineered from the ground up for massive auditorium screens, dual laser projectors, and presenter confidence:
