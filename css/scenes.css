@@ -479,14 +479,14 @@
 
 
 /* ==========================================================================
-   SCENE 15: INDIA MAP (EXACT OFFICIAL SILHOUETTE & LASER OVERLAY)
+   SCENE 15: INDIA MAP (MASSIVE STAGE PROJECTOR SCALE & TRICOLOR GLOW)
    ========================================================================== */
 .map-canvas-container {
   width: 100%;
-  max-width: 620px;
-  height: 480px;
+  max-width: 860px;
+  height: 560px;
   position: relative;
-  margin: 0.5rem 0;
+  margin: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -501,9 +501,9 @@
   object-fit: contain;
   pointer-events: none;
   z-index: 1;
-  filter: drop-shadow(0 -10px 25px rgba(255, 153, 51, 0.4))
-          drop-shadow(0 0 20px rgba(255, 255, 255, 0.3))
-          drop-shadow(0 10px 25px rgba(19, 136, 8, 0.45));
+  filter: drop-shadow(0 -15px 35px rgba(255, 153, 51, 0.55))
+          drop-shadow(0 0 25px rgba(255, 255, 255, 0.45))
+          drop-shadow(0 15px 35px rgba(19, 136, 8, 0.6));
 }
 
 #india-map-canvas {

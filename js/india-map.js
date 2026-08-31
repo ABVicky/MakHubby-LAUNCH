@@ -63,8 +63,8 @@ class IndiaMapVisualizer {
     const rect = this.container.getBoundingClientRect();
     const dpr = window.devicePixelRatio || 1;
     
-    this.cssWidth = rect.width || 680;
-    this.cssHeight = rect.height || 500;
+    this.cssWidth = rect.width || 860;
+    this.cssHeight = rect.height || 560;
     
     this.canvas.width = this.cssWidth * dpr;
     this.canvas.height = this.cssHeight * dpr;
@@ -105,7 +105,7 @@ class IndiaMapVisualizer {
           from: origin,
           to: target,
           progress: Math.random() * 0.6,
-          speed: 0.008 + Math.random() * 0.005
+          speed: 0.009 + Math.random() * 0.005
         });
       }
     });
@@ -145,9 +145,9 @@ class IndiaMapVisualizer {
       this.ctx.beginPath();
       this.ctx.moveTo(originPt.x, originPt.y);
       this.ctx.lineTo(targetPt.x, targetPt.y);
-      this.ctx.strokeStyle = 'rgba(52, 211, 153, 0.28)';
-      this.ctx.lineWidth = 1.3;
-      this.ctx.setLineDash([4, 4]);
+      this.ctx.strokeStyle = 'rgba(52, 211, 153, 0.32)';
+      this.ctx.lineWidth = 1.6;
+      this.ctx.setLineDash([5, 5]);
       this.ctx.stroke();
       this.ctx.setLineDash([]);
     });
@@ -166,76 +166,76 @@ class IndiaMapVisualizer {
       const curY = pFrom.y + (pTo.y - pFrom.y) * pulse.progress;
 
       this.ctx.beginPath();
-      this.ctx.arc(curX, curY, 3.5, 0, Math.PI * 2);
+      this.ctx.arc(curX, curY, 4.5, 0, Math.PI * 2);
       this.ctx.fillStyle = '#ffffff';
       this.ctx.shadowColor = '#34d399';
-      this.ctx.shadowBlur = 14;
+      this.ctx.shadowBlur = 16;
       this.ctx.fill();
       this.ctx.shadowBlur = 0;
     });
 
     // 3. Origin Beacon Waves from MAKAUT (West Bengal)
     for (let r = 0; r < 2; r++) {
-      const radius = ((this.animTime * 25) + r * 35) % 75;
-      const alpha = Math.max(0, 1 - radius / 75);
+      const radius = ((this.animTime * 25) + r * 45) % 95;
+      const alpha = Math.max(0, 1 - radius / 95);
       this.ctx.beginPath();
       this.ctx.arc(originPt.x, originPt.y, radius, 0, Math.PI * 2);
-      this.ctx.strokeStyle = `rgba(52, 211, 153, ${alpha * 0.8})`;
-      this.ctx.lineWidth = 1.6;
+      this.ctx.strokeStyle = `rgba(52, 211, 153, ${alpha * 0.85})`;
+      this.ctx.lineWidth = 2;
       this.ctx.stroke();
     }
 
-    // 4. University Nodes & Precision Labels
+    // 4. University Nodes & Precision Labels (Enlarged for Distance)
     this.nodes.forEach((node) => {
       const pt = toScreen(node.x, node.y);
 
       if (node.isOrigin) {
         // High-Lumen Origin Beacon
         this.ctx.beginPath();
-        this.ctx.arc(pt.x, pt.y, 7.5, 0, Math.PI * 2);
+        this.ctx.arc(pt.x, pt.y, 9, 0, Math.PI * 2);
         this.ctx.fillStyle = '#ffffff';
         this.ctx.shadowColor = '#34d399';
-        this.ctx.shadowBlur = 20;
+        this.ctx.shadowBlur = 24;
         this.ctx.fill();
         this.ctx.shadowBlur = 0;
 
         this.ctx.beginPath();
-        this.ctx.arc(pt.x, pt.y, 12, 0, Math.PI * 2);
+        this.ctx.arc(pt.x, pt.y, 15, 0, Math.PI * 2);
         this.ctx.strokeStyle = '#10b981';
-        this.ctx.lineWidth = 2.2;
+        this.ctx.lineWidth = 2.8;
         this.ctx.stroke();
 
         // Origin text
-        this.ctx.font = 'bold 13px -apple-system, BlinkMacSystemFont, "Inter", sans-serif';
+        this.ctx.font = 'bold 15.5px -apple-system, BlinkMacSystemFont, "Inter", sans-serif';
         this.ctx.fillStyle = '#34d399';
         this.ctx.textAlign = 'left';
         this.ctx.textBaseline = 'middle';
         this.ctx.shadowColor = 'rgba(0, 0, 0, 0.95)';
-        this.ctx.shadowBlur = 8;
-        this.ctx.fillText(`★ ${node.name}`, pt.x + 16, pt.y);
+        this.ctx.shadowBlur = 10;
+        this.ctx.fillText(`★ ${node.name}`, pt.x + 20, pt.y);
         this.ctx.shadowBlur = 0;
       } else {
         // Expansion Node Pins
         this.ctx.beginPath();
-        this.ctx.arc(pt.x, pt.y, 4.5, 0, Math.PI * 2);
+        this.ctx.arc(pt.x, pt.y, 6, 0, Math.PI * 2);
         this.ctx.fillStyle = '#a78bfa';
         this.ctx.shadowColor = '#8b5cf6';
-        this.ctx.shadowBlur = 10;
+        this.ctx.shadowBlur = 14;
         this.ctx.fill();
         this.ctx.shadowBlur = 0;
 
-        this.ctx.font = '600 11px "SF Mono", "JetBrains Mono", monospace';
-        this.ctx.fillStyle = '#f1f5f9';
+        this.ctx.font = 'bold 13px "SF Mono", "JetBrains Mono", monospace';
+        this.ctx.fillStyle = '#f8fafc';
         this.ctx.textBaseline = 'middle';
         this.ctx.shadowColor = 'rgba(0, 0, 0, 0.95)';
-        this.ctx.shadowBlur = 6;
+        this.ctx.shadowBlur = 8;
 
         if (node.labelPos === 'left') {
           this.ctx.textAlign = 'right';
-          this.ctx.fillText(node.name, pt.x - 9, pt.y);
+          this.ctx.fillText(node.name, pt.x - 12, pt.y);
         } else {
           this.ctx.textAlign = 'left';
-          this.ctx.fillText(node.name, pt.x + 9, pt.y);
+          this.ctx.fillText(node.name, pt.x + 12, pt.y);
         }
         this.ctx.shadowBlur = 0;
       }
