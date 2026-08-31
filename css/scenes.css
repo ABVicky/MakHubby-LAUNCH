@@ -479,11 +479,11 @@
 
 
 /* ==========================================================================
-   SCENE 15: INDIA MAP
+   SCENE 15: INDIA MAP (HIGH-DEFINITION VECTOR & LASER OVERLAY)
    ========================================================================== */
 .map-canvas-container {
   width: 100%;
-  max-width: 760px;
+  max-width: 680px;
   height: 480px;
   position: relative;
   margin: 0.5rem 0;
@@ -492,10 +492,25 @@
   justify-content: center;
 }
 
+#india-svg-vector {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  filter: drop-shadow(0 0 20px rgba(52, 211, 153, 0.3));
+}
+
 #india-map-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   display: block;
+  z-index: 2;
 }
 
 

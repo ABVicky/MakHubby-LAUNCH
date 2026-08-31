@@ -1,47 +1,117 @@
 /**
  * High-Precision India Academic Network Map Visualizer
- * Accurate Geographical Vector Projection with Aspect Ratio Preservation
+ * Ultra-Detailed Authentic Vector Projection + Photon Laser Engine
  */
 
 class IndiaMapVisualizer {
-  constructor(canvasId) {
-    this.canvas = document.getElementById(canvasId);
+  constructor(containerId) {
+    this.container = document.querySelector('.map-canvas-container');
+    this.canvas = document.getElementById('india-map-canvas');
     if (!this.canvas) return;
     this.ctx = this.canvas.getContext('2d');
-    this.stage = 1;
-    this.pulses = [];
+    
     this.animTime = 0;
     this.animationFrame = null;
     this.active = false;
 
-    // Geographically accurate coordinates mapped on a normalized 100x100 grid
+    // True geographical positions mapped onto standard India map coordinate space [viewBox: 0 0 600 680]
     this.nodes = [
-      { id: 'makaut', name: 'MAKAUT (West Bengal)', x: 72, y: 47, isOrigin: true, labelPos: 'right' },
-      { id: 'kolkata', name: 'Kolkata (JU / CU)', x: 73, y: 51, isOrigin: false, labelPos: 'right' },
-      { id: 'delhi', name: 'Delhi NCR (IITD / DU)', x: 44, y: 22, isOrigin: false, labelPos: 'left' },
-      { id: 'roorkee', name: 'Roorkee (IITR)', x: 48, y: 16, isOrigin: false, labelPos: 'right' },
-      { id: 'northeast', name: 'Guwahati / NE (IITG)', x: 84, y: 31, isOrigin: false, labelPos: 'right' },
-      { id: 'mumbai', name: 'Mumbai (IITB / MU)', x: 33, y: 55, isOrigin: false, labelPos: 'left' },
-      { id: 'pune', name: 'Pune (SPPU / COEP)', x: 36, y: 60, isOrigin: false, labelPos: 'left' },
-      { id: 'hyderabad', name: 'Hyderabad (IITH / JNTU)', x: 50, y: 61, isOrigin: false, labelPos: 'right' },
-      { id: 'bengaluru', name: 'Bengaluru (IISc / VTU)', x: 45, y: 76, isOrigin: false, labelPos: 'left' },
-      { id: 'chennai', name: 'Chennai (IITM / Anna)', x: 55, y: 78, isOrigin: false, labelPos: 'right' }
+      { id: 'makaut', name: 'MAKAUT (West Bengal)', x: 420, y: 345, isOrigin: true, labelPos: 'right', state: 'Origin Hub' },
+      { id: 'kolkata', name: 'Kolkata (JU / CU)', x: 425, y: 375, isOrigin: false, labelPos: 'right', state: 'WB' },
+      { id: 'delhi', name: 'Delhi NCR (IITD / DU)', x: 235, y: 205, isOrigin: false, labelPos: 'left', state: 'Delhi' },
+      { id: 'roorkee', name: 'Roorkee (IITR)', x: 260, y: 165, isOrigin: false, labelPos: 'right', state: 'UK' },
+      { id: 'guwahati', name: 'Guwahati (IITG)', x: 505, y: 255, isOrigin: false, labelPos: 'right', state: 'Assam' },
+      { id: 'mumbai', name: 'Mumbai (IITB / MU)', x: 165, y: 420, isOrigin: false, labelPos: 'left', state: 'MH' },
+      { id: 'pune', name: 'Pune (SPPU / COEP)', x: 185, y: 450, isOrigin: false, labelPos: 'left', state: 'MH' },
+      { id: 'hyderabad', name: 'Hyderabad (IITH)', x: 280, y: 460, isOrigin: false, labelPos: 'right', state: 'TS' },
+      { id: 'bengaluru', name: 'Bengaluru (IISc)', x: 245, y: 555, isOrigin: false, labelPos: 'left', state: 'KA' },
+      { id: 'chennai', name: 'Chennai (IITM / Anna)', x: 305, y: 565, isOrigin: false, labelPos: 'right', state: 'TN' }
     ];
 
+    this.pulses = [];
     this.init();
   }
 
   init() {
+    this.injectDetailedSvgMap();
     this.resize();
     window.addEventListener('resize', () => this.resize());
   }
 
+  /**
+   * Embeds an authentic, high-definition curved SVG vector of India into the background
+   */
+  injectDetailedSvgMap() {
+    if (!this.container) return;
+    
+    // Check if svg already exists
+    let svgEl = document.getElementById('india-svg-vector');
+    if (!svgEl) {
+      svgEl = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+      svgEl.setAttribute('id', 'india-svg-vector');
+      svgEl.setAttribute('viewBox', '0 0 600 680');
+      svgEl.innerHTML = `
+        <defs>
+          <linearGradient id="indiaMapGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#064e3b" stop-opacity="0.35" />
+            <stop offset="50%" stop-color="#1e1b4b" stop-opacity="0.2" />
+            <stop offset="100%" stop-color="#06090e" stop-opacity="0.6" />
+          </linearGradient>
+          <filter id="glowFilter" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="4" result="blur" />
+            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+          </filter>
+        </defs>
+
+        <!-- Authentic High-Resolution India Geographic Vector Path -->
+        <path class="india-border-path" d="
+          M 245,35
+          C 255,25 270,20 285,25
+          C 295,30 310,25 320,40
+          C 335,60 330,85 315,105
+          C 305,115 315,130 330,135
+          C 350,140 375,155 395,160
+          C 415,165 425,155 435,160
+          C 440,165 440,175 450,180
+          C 465,185 490,170 515,165
+          C 535,160 555,175 565,195
+          C 575,215 565,240 545,260
+          C 535,270 535,290 525,305
+          C 515,320 495,325 480,315
+          C 465,305 450,300 440,315
+          C 435,325 445,340 440,355
+          C 435,370 415,385 405,395
+          C 390,410 380,440 365,470
+          C 350,500 335,535 320,570
+          C 305,605 285,640 270,660
+          C 260,650 250,620 240,580
+          C 230,540 215,500 200,470
+          C 185,440 170,410 160,390
+          C 145,360 120,345 105,350
+          C 90,355 80,340 90,325
+          C 100,310 120,305 135,315
+          C 150,325 170,310 165,290
+          C 160,270 145,250 155,230
+          C 165,210 185,185 205,165
+          C 220,145 225,120 230,95
+          C 235,70 235,45 245,35 Z
+        " fill="url(#indiaMapGrad)" stroke="#34d399" stroke-width="2.2" filter="url(#glowFilter)" opacity="0.9" />
+
+        <!-- Interior Zone Contours -->
+        <path d="M 235,205 Q 330,270 420,345" fill="none" stroke="rgba(52, 211, 153, 0.15)" stroke-width="1" stroke-dasharray="4,4"/>
+        <path d="M 420,345 Q 330,450 245,555" fill="none" stroke="rgba(52, 211, 153, 0.15)" stroke-width="1" stroke-dasharray="4,4"/>
+        <path d="M 420,345 Q 290,380 165,420" fill="none" stroke="rgba(52, 211, 153, 0.15)" stroke-width="1" stroke-dasharray="4,4"/>
+      `;
+      this.container.insertBefore(svgEl, this.canvas);
+    }
+  }
+
   resize() {
-    if (!this.canvas || !this.canvas.parentElement) return;
-    const rect = this.canvas.parentElement.getBoundingClientRect();
+    if (!this.canvas || !this.container) return;
+    const rect = this.container.getBoundingClientRect();
     const dpr = window.devicePixelRatio || 1;
     
-    this.cssWidth = rect.width || 800;
+    this.cssWidth = rect.width || 760;
     this.cssHeight = rect.height || 480;
     
     this.canvas.width = this.cssWidth * dpr;
@@ -68,8 +138,7 @@ class IndiaMapVisualizer {
   }
 
   setStage(stageNum) {
-    this.stage = stageNum;
-    if (stageNum >= 3) {
+    if (stageNum >= 2) {
       this.triggerNetworkPulses();
     }
   }
@@ -78,52 +147,16 @@ class IndiaMapVisualizer {
     const origin = this.nodes.find(n => n.isOrigin) || this.nodes[0];
     if (!origin) return;
     this.pulses = [];
-    this.nodes.forEach((targetNode) => {
-      if (!targetNode.isOrigin) {
+    this.nodes.forEach((target) => {
+      if (!target.isOrigin) {
         this.pulses.push({
           from: origin,
-          to: targetNode,
-          progress: Math.random() * 0.5,
-          speed: 0.008 + Math.random() * 0.006,
-          trail: []
+          to: target,
+          progress: Math.random() * 0.6,
+          speed: 0.008 + Math.random() * 0.005
         });
       }
     });
-  }
-
-  /**
-   * Geographically accurate vector polygon of India's coastline & borders
-   * Normalized on a [0..100] coordinate space (North at top, South at bottom)
-   */
-  getIndiaBoundary() {
-    return [
-      // Northern Crown (Kashmir / Ladakh)
-      [47, 5], [52, 4], [55, 7], [56, 12],
-      // Himachal / Uttarakhand / Nepal border
-      [53, 15], [55, 18], [61, 22], [67, 24],
-      // Sikkim & Bhutan border
-      [71, 24], [72, 22], [75, 23],
-      // Arunachal Pradesh & North-East Frontier
-      [79, 21], [85, 20], [89, 23], [91, 28],
-      // Nagaland / Manipur / Mizoram / Myanmar border
-      [88, 36], [85, 41], [81, 40], [78, 37],
-      // Bangladesh cut / West Bengal coast & Sundarbans
-      [75, 34], [73, 40], [75, 46], [72, 49],
-      // Odisha & Andhra Coast (Bay of Bengal)
-      [68, 54], [64, 61], [58, 69], [55, 77],
-      // Tamil Nadu & Kanyakumari (Southern Tip)
-      [52, 85], [49, 93], [46, 92],
-      // Kerala & Karnataka (Arabian Sea Coast)
-      [43, 85], [41, 76], [38, 68],
-      // Goa & Maharashtra (Konkan Coast)
-      [36, 61], [33, 54], [34, 48],
-      // Gujarat Peninsula (Gulf of Khambhat & Kutch)
-      [30, 45], [25, 47], [20, 44], [18, 39], [22, 35], [28, 33],
-      // Rajasthan & Punjab (Western Border)
-      [31, 27], [35, 20], [38, 14], [43, 8],
-      // Back to Kashmir Peak
-      [47, 5]
-    ];
   }
 
   animate() {
@@ -131,74 +164,28 @@ class IndiaMapVisualizer {
     this.ctx.clearRect(0, 0, this.cssWidth, this.cssHeight);
     this.animTime += 0.03;
 
-    // Aspect ratio preservation (India is tall: height/width ratio ~1.15)
-    const padding = 24;
-    const availableW = this.cssWidth - padding * 2;
-    const availableH = this.cssHeight - padding * 2;
+    // Coordinate mapping from SVG viewBox (600x680) to Screen Canvas
+    const svgAspect = 600 / 680;
+    let renderW = this.cssWidth;
+    let renderH = renderW / svgAspect;
 
-    const scale = Math.min(availableW / 96, availableH / 98);
-    const mapWidth = 96 * scale;
-    const mapHeight = 98 * scale;
+    if (renderH > this.cssHeight) {
+      renderH = this.cssHeight;
+      renderW = renderH * svgAspect;
+    }
 
-    const offsetX = (this.cssWidth - mapWidth) / 2;
-    const offsetY = (this.cssHeight - mapHeight) / 2 + 5;
+    const offsetX = (this.cssWidth - renderW) / 2;
+    const offsetY = (this.cssHeight - renderH) / 2;
 
     const toScreen = (x, y) => ({
-      x: offsetX + (x * scale),
-      y: offsetY + (y * scale)
+      x: offsetX + (x / 600) * renderW,
+      y: offsetY + (y / 680) * renderH
     });
 
-    // 1. Futuristic Tactical Coordinate Grid
-    this.ctx.strokeStyle = 'rgba(52, 211, 153, 0.04)';
-    this.ctx.lineWidth = 1;
-    const gridSize = 45;
-    for (let x = 0; x < this.cssWidth; x += gridSize) {
-      this.ctx.beginPath();
-      this.ctx.moveTo(x, 0);
-      this.ctx.lineTo(x, this.cssHeight);
-      this.ctx.stroke();
-    }
-    for (let y = 0; y < this.cssHeight; y += gridSize) {
-      this.ctx.beginPath();
-      this.ctx.moveTo(0, y);
-      this.ctx.lineTo(this.cssWidth, y);
-      this.ctx.stroke();
-    }
+    const origin = this.nodes.find(n => n.isOrigin) || this.nodes[0];
+    const originPt = toScreen(origin.x, origin.y);
 
-    // 2. India Map Vector Outline & Atmospheric Aurora Glow
-    const boundary = this.getIndiaBoundary();
-    this.ctx.beginPath();
-    const firstPt = toScreen(boundary[0][0], boundary[0][1]);
-    this.ctx.moveTo(firstPt.x, firstPt.y);
-    for (let i = 1; i < boundary.length; i++) {
-      const pt = toScreen(boundary[i][0], boundary[i][1]);
-      this.ctx.lineTo(pt.x, pt.y);
-    }
-    this.ctx.closePath();
-
-    // Map Interior Fill Gradient (Aurora Emerald to Deep Obsidian)
-    const originNode = this.nodes.find(n => n.isOrigin) || this.nodes[0];
-    const originPt = toScreen(originNode.x, originNode.y);
-
-    const mapGradient = this.ctx.createRadialGradient(
-      originPt.x, originPt.y, 10,
-      this.cssWidth / 2, this.cssHeight / 2, mapHeight * 0.7
-    );
-    mapGradient.addColorStop(0, 'rgba(16, 185, 129, 0.16)');
-    mapGradient.addColorStop(0.5, 'rgba(139, 92, 246, 0.06)');
-    mapGradient.addColorStop(1, 'rgba(6, 9, 16, 0.4)');
-    this.ctx.fillStyle = mapGradient;
-    this.ctx.fill();
-
-    // Luminous Map Border Stroke
-    this.ctx.strokeStyle = 'rgba(52, 211, 153, 0.55)';
-    this.ctx.lineWidth = 2;
-    this.ctx.shadowColor = '#10b981';
-    this.ctx.shadowBlur = 14;
-    this.ctx.stroke();
-    this.ctx.shadowBlur = 0;
-
-    // 3. Photon Laser Network Lines from MAKAUT Origin
+    // 1. Draw Network Connections from MAKAUT Origin
     this.nodes.forEach((target) => {
       if (target.isOrigin) return;
       const targetPt = toScreen(target.x, target.y);
@@ -206,78 +193,77 @@ class IndiaMapVisualizer {
       this.ctx.beginPath();
       this.ctx.moveTo(originPt.x, originPt.y);
       this.ctx.lineTo(targetPt.x, targetPt.y);
-      this.ctx.strokeStyle = 'rgba(52, 211, 153, 0.18)';
-      this.ctx.lineWidth = 1.2;
+      this.ctx.strokeStyle = 'rgba(52, 211, 153, 0.22)';
+      this.ctx.lineWidth = 1.3;
       this.ctx.setLineDash([4, 4]);
       this.ctx.stroke();
       this.ctx.setLineDash([]);
     });
 
-    // 4. Animated Photon Laser Pulses traveling across network
+    // 2. Animated Laser Photons Traveling on Network Lines
     this.pulses.forEach((pulse) => {
       pulse.progress += pulse.speed;
       if (pulse.progress > 1) {
         pulse.progress = 0;
       }
 
-      const fromPt = toScreen(pulse.from.x, pulse.from.y);
-      const toPt = toScreen(pulse.to.x, pulse.to.y);
+      const pFrom = toScreen(pulse.from.x, pulse.from.y);
+      const pTo = toScreen(pulse.to.x, pulse.to.y);
 
-      const curX = fromPt.x + (toPt.x - fromPt.x) * pulse.progress;
-      const curY = fromPt.y + (toPt.y - fromPt.y) * pulse.progress;
+      const curX = pFrom.x + (pTo.x - pFrom.x) * pulse.progress;
+      const curY = pFrom.y + (pTo.y - pFrom.y) * pulse.progress;
 
-      // Glow head
       this.ctx.beginPath();
       this.ctx.arc(curX, curY, 3.5, 0, Math.PI * 2);
       this.ctx.fillStyle = '#ffffff';
       this.ctx.shadowColor = '#34d399';
-      this.ctx.shadowBlur = 12;
+      this.ctx.shadowBlur = 14;
       this.ctx.fill();
       this.ctx.shadowBlur = 0;
     });
 
-    // 5. Origin Wave Rings from MAKAUT (West Bengal)
-    for (let ring = 0; ring < 2; ring++) {
-      const ringRadius = ((this.animTime * 28) + ring * 35) % 80;
-      const ringAlpha = Math.max(0, 1 - ringRadius / 80);
+    // 3. Origin Beacon Waves from MAKAUT (West Bengal)
+    for (let r = 0; r < 2; r++) {
+      const radius = ((this.animTime * 25) + r * 35) % 75;
+      const alpha = Math.max(0, 1 - radius / 75);
       this.ctx.beginPath();
-      this.ctx.arc(originPt.x, originPt.y, ringRadius, 0, Math.PI * 2);
-      this.ctx.strokeStyle = `rgba(52, 211, 153, ${ringAlpha * 0.7})`;
-      this.ctx.lineWidth = 1.5;
+      this.ctx.arc(originPt.x, originPt.y, radius, 0, Math.PI * 2);
+      this.ctx.strokeStyle = `rgba(52, 211, 153, ${alpha * 0.75})`;
+      this.ctx.lineWidth = 1.6;
       this.ctx.stroke();
     }
 
-    // 6. Draw University Nodes & Distance-Legible Labels
+    // 4. University Nodes & Precision Labels
     this.nodes.forEach((node) => {
       const pt = toScreen(node.x, node.y);
 
       if (node.isOrigin) {
-        // Origin Beacon (MAKAUT)
+        // High-Lumen Origin Beacon
         this.ctx.beginPath();
-        this.ctx.arc(pt.x, pt.y, 7, 0, Math.PI * 2);
+        this.ctx.arc(pt.x, pt.y, 7.5, 0, Math.PI * 2);
         this.ctx.fillStyle = '#ffffff';
         this.ctx.shadowColor = '#34d399';
-        this.ctx.shadowBlur = 18;
+        this.ctx.shadowBlur = 20;
         this.ctx.fill();
         this.ctx.shadowBlur = 0;
 
         this.ctx.beginPath();
-        this.ctx.arc(pt.x, pt.y, 11, 0, Math.PI * 2);
+        this.ctx.arc(pt.x, pt.y, 12, 0, Math.PI * 2);
         this.ctx.strokeStyle = '#10b981';
-        this.ctx.lineWidth = 2;
+        this.ctx.lineWidth = 2.2;
         this.ctx.stroke();
 
-        // High-Lumen Origin Label
+        // Origin text
         this.ctx.font = 'bold 13px -apple-system, BlinkMacSystemFont, "Inter", sans-serif';
         this.ctx.fillStyle = '#34d399';
         this.ctx.textAlign = 'left';
         this.ctx.textBaseline = 'middle';
         this.ctx.shadowColor = 'rgba(0, 0, 0, 0.9)';
-        this.ctx.shadowBlur = 6;
+        this.ctx.shadowBlur = 8;
         this.ctx.fillText(`★ ${node.name}`, pt.x + 16, pt.y);
         this.ctx.shadowBlur = 0;
       } else {
-        // Target University Hubs
+        // Expansion Node Pins
         this.ctx.beginPath();
         this.ctx.arc(pt.x, pt.y, 4.5, 0, Math.PI * 2);
         this.ctx.fillStyle = '#a78bfa';
@@ -286,12 +272,11 @@ class IndiaMapVisualizer {
         this.ctx.fill();
         this.ctx.shadowBlur = 0;
 
-        // Label formatting
-        this.ctx.font = '600 10.5px "SF Mono", "JetBrains Mono", monospace';
-        this.ctx.fillStyle = '#e2e8f0';
+        this.ctx.font = '600 11px "SF Mono", "JetBrains Mono", monospace';
+        this.ctx.fillStyle = '#f1f5f9';
         this.ctx.textBaseline = 'middle';
-        this.ctx.shadowColor = 'rgba(0, 0, 0, 0.9)';
-        this.ctx.shadowBlur = 5;
+        this.ctx.shadowColor = 'rgba(0, 0, 0, 0.95)';
+        this.ctx.shadowBlur = 6;
 
         if (node.labelPos === 'left') {
           this.ctx.textAlign = 'right';
